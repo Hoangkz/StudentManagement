@@ -2,7 +2,21 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
-
+/StudentManagement/ModelStudentManage.edmx
+/StudentManagement/ModelStudentManage.Context.cs
+/StudentManagement/ModelStudentManage.Context.tt
+/StudentManagement/ModelStudentManage.cs
+/StudentManagement/ModelStudentManage.Designer.cs
+/StudentManagement/ModelStudentManage.edmx.diagram
+/StudentManagement/ModelStudentManage.tt
+/StudentManagement/Student.cs
+/StudentManagement/Subjects.cs
+/StudentManagement/Marks.cs
+/StudentManagement/Teacher.cs
+/StudentManagement/Faculty.cs
+/StudentManagement/Accounts.cs
+/StudentManagement/App.Config
+/StudentManagement/App.config
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
