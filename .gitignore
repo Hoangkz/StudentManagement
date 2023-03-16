@@ -48,6 +48,7 @@ bld/
 /StudentManagement/Faculty.cs
 /StudentManagement/Accounts.cs
 /StudentManagement/App.Config
+/StudentManagement/App.config
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
