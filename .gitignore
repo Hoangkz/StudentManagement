@@ -33,6 +33,22 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+
+/ModelStudentManage.edmx
+/ModelStudentManage.Context.cs
+/ModelStudentManage.Context.tt
+/ModelStudentManage.cs
+/ModelStudentManage.Designer.cs
+/ModelStudentManage.edmx.diagram
+/ModelStudentManage.tt
+/Student.cs
+/Subjects.cs
+/Marks.cs
+/Teacher.cs
+/Faculty.cs
+/Accounts.cs
+
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
