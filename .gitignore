@@ -34,20 +34,20 @@ bld/
 [Ll]ogs/
 
 
-/ModelStudentManage.edmx
-/ModelStudentManage.Context.cs
-/ModelStudentManage.Context.tt
-/ModelStudentManage.cs
-/ModelStudentManage.Designer.cs
-/ModelStudentManage.edmx.diagram
-/ModelStudentManage.tt
-/Student.cs
-/Subjects.cs
-/Marks.cs
-/Teacher.cs
-/Faculty.cs
-/Accounts.cs
-/App.config
+/StudentManagement/ModelStudentManage.edmx
+/StudentManagement/ModelStudentManage.Context.cs
+/StudentManagement/ModelStudentManage.Context.tt
+/StudentManagement/ModelStudentManage.cs
+/StudentManagement/ModelStudentManage.Designer.cs
+/StudentManagement/ModelStudentManage.edmx.diagram
+/StudentManagement/ModelStudentManage.tt
+/StudentManagement/Student.cs
+/StudentManagement/Subjects.cs
+/StudentManagement/Marks.cs
+/StudentManagement/Teacher.cs
+/StudentManagement/Faculty.cs
+/StudentManagement/Accounts.cs
+/StudentManagement/App.config
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
