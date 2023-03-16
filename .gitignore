@@ -47,6 +47,8 @@ bld/
 /StudentManagement/Teacher.cs
 /StudentManagement/Faculty.cs
 /StudentManagement/Accounts.cs
+/StudentManagement/App.Config
+/StudentManagement/App.config
 /StudentManagement/ClassRoom.cs
 
 # Visual Studio 2015/2017 cache/options directory
@@ -378,3 +380,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
+
+App.Config
+App.config
