@@ -133,7 +133,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelStudentManage.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="ModelStudentManage.edmx.diagram">
       <DependentUpon>ModelStudentManage.edmx</DependentUpon>
     </None>
