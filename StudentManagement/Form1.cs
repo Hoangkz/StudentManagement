@@ -28,7 +28,7 @@ namespace StudentManagement
                         where c.Id == 1 || c.Id ==2
                         select new { Id = c.Id, UserName = c.UserName };
             */
-            var query = db.Accounts.Where(a => a.Id >= 1);
+            var query = db.Account.Where(a => a.Id >= 1);
             dataGridView1.DataSource = query.ToList();
             //tìm theo id
             //var query = db.Accounts.Find(1);
@@ -44,20 +44,20 @@ namespace StudentManagement
                 PassWord = "Hoang1"
             };
 
-            db.Accounts.Add(accounts);
+            db.Account.Add(accounts);
             db.SaveChanges();
         }
         void deleteAccount()
         {
-            Account accounts = db.Accounts.Where(a => a.Id == 4).SingleOrDefault();
-            db.Accounts.Remove(accounts);
+            Account account = db.Account.Where(a => a.Id == 4).SingleOrDefault();
+            db.Account.Remove(account);
             db.SaveChanges();
         }
 
         void editAccount()
         {
             int id = 2;
-            Account accounts = db.Accounts.Find(id);
+            Account accounts = db.Account.Find(id);
             accounts.PassWord = "New PassWord";
             accounts.UserName = "New UserName";
             db.SaveChanges();
