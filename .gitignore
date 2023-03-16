@@ -367,8 +367,6 @@ FodyWeavers.xsd
 
 
 
-App.Config
-App.config
 
 /StudentManagement/ModelStudentManage.edmx
 /StudentManagement/ModelStudentManage.Context.cs
@@ -383,6 +381,4 @@ App.config
 /StudentManagement/Teacher.cs
 /StudentManagement/Faculty.cs
 /StudentManagement/Accounts.cs
-/StudentManagement/App.Config
-/StudentManagement/App.config
 /StudentManagement/ClassRoom.cs
