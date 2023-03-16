@@ -13,6 +13,7 @@
 /StudentManagement/Subjects.cs
 /StudentManagement/Marks.cs
 /StudentManagement/Teacher.cs
+/StudentManagement/ClassRoom.cs
 /StudentManagement/Faculty.cs
 /StudentManagement/Accounts.cs
 /StudentManagement/App.Config
