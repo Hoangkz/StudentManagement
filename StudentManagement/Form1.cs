@@ -38,7 +38,7 @@ namespace StudentManagement
         void addAccount()
         {
             //add
-            Accounts accounts = new Accounts()
+            Account accounts = new Account()
             {
                 UserName = "Hoang6",
                 PassWord = "Hoang1"
@@ -49,7 +49,7 @@ namespace StudentManagement
         }
         void deleteAccount()
         {
-            Accounts accounts = db.Accounts.Where(a => a.Id == 4).SingleOrDefault();
+            Account accounts = db.Accounts.Where(a => a.Id == 4).SingleOrDefault();
             db.Accounts.Remove(accounts);
             db.SaveChanges();
         }
@@ -57,7 +57,7 @@ namespace StudentManagement
         void editAccount()
         {
             int id = 2;
-            Accounts accounts = db.Accounts.Find(id);
+            Account accounts = db.Accounts.Find(id);
             accounts.PassWord = "New PassWord";
             accounts.UserName = "New UserName";
             db.SaveChanges();

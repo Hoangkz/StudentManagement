@@ -55,7 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounts.cs">
+    <Compile Include="Account.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="ClassRoom.cs">
@@ -82,7 +82,7 @@
     <Compile Include="FormStudentManagement.Designer.cs">
       <DependentUpon>FormStudentManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Marks.cs">
+    <Compile Include="Mark.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelStudentManage.Context.cs">
@@ -105,7 +105,7 @@
     <Compile Include="Student.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
-    <Compile Include="Subjects.cs">
+    <Compile Include="Subject.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
