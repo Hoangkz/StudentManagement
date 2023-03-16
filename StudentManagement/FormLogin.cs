@@ -20,7 +20,6 @@ namespace StudentManagement
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             FormStudentManagement st = new FormStudentManagement();
-            Console.WriteLine("zzz");
             this.Hide();
             st.ShowDialog();
             this.Show();
