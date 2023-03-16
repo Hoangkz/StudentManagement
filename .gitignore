@@ -382,3 +382,5 @@ FodyWeavers.xsd
 /StudentManagement/Faculty.cs
 /StudentManagement/Accounts.cs
 /StudentManagement/ClassRoom.cs
+/StudentManagement/App.Config
+/StudentManagement/App.config
