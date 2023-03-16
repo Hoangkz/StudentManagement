@@ -34,22 +34,7 @@ bld/
 [Ll]ogs/
 
 
-/StudentManagement/ModelStudentManage.edmx
-/StudentManagement/ModelStudentManage.Context.cs
-/StudentManagement/ModelStudentManage.Context.tt
-/StudentManagement/ModelStudentManage.cs
-/StudentManagement/ModelStudentManage.Designer.cs
-/StudentManagement/ModelStudentManage.edmx.diagram
-/StudentManagement/ModelStudentManage.tt
-/StudentManagement/Student.cs
-/StudentManagement/Subjects.cs
-/StudentManagement/Marks.cs
-/StudentManagement/Teacher.cs
-/StudentManagement/Faculty.cs
-/StudentManagement/Accounts.cs
-/StudentManagement/App.Config
-/StudentManagement/App.config
-/StudentManagement/ClassRoom.cs
+
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -381,5 +366,23 @@ MigrationBackup/
 FodyWeavers.xsd
 
 
+
 App.Config
 App.config
+
+/StudentManagement/ModelStudentManage.edmx
+/StudentManagement/ModelStudentManage.Context.cs
+/StudentManagement/ModelStudentManage.Context.tt
+/StudentManagement/ModelStudentManage.cs
+/StudentManagement/ModelStudentManage.Designer.cs
+/StudentManagement/ModelStudentManage.edmx.diagram
+/StudentManagement/ModelStudentManage.tt
+/StudentManagement/Student.cs
+/StudentManagement/Subjects.cs
+/StudentManagement/Marks.cs
+/StudentManagement/Teacher.cs
+/StudentManagement/Faculty.cs
+/StudentManagement/Accounts.cs
+/StudentManagement/App.Config
+/StudentManagement/App.config
+/StudentManagement/ClassRoom.cs
