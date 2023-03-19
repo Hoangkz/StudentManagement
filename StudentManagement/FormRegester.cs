@@ -67,30 +67,14 @@ namespace StudentManagement
         {
             string username = textBox1.Text;
             string password = textBox2.Text;
-            string loaitk = comboBox1.SelectedItem.ToString().Replace(" ", "").ToLower();
-            int role = 0;
-            if(loaitk == "sinhviên")
-            {
-                role = 1;
-            }
-            else if (loaitk == "giảngviên")
-            {
-                role = 2;
-            }
-            else if (loaitk == "nhânviên")
-            {
-                role = 3;
-            }
-            else if (loaitk == "admin")
-            {
-                role = 4;
-            }
+            string role = comboBox1.SelectedItem.ToString();
+          
             string fullname = textBox3.Text;
             string gender = comboBox2.SelectedItem.ToString();
             string dateOfbirth = dateTimePicker1.Value.ToShortDateString().ToString();
             string tell = textBox2.Text;
             string email = textBox2.Text;
-            if (username.Length >= 5 && password.Length >= 5 && role>0 && fullname.Length>0)
+            if (username.Length >= 5 && password.Length >= 5 && role!="" && fullname.Length>0)
             { 
                 var query = db.Account.Where(a => a.UserName == username);
                 if (query.Count() > 0)
@@ -113,7 +97,7 @@ namespace StudentManagement
                     };
                     db.Account.Add(newAccount);
                     db.SaveChanges();
-                    if(role == 1)
+                    if(role.Replace(" ","").ToLower() == "sinhviên")
                     {
                         Student student = new Student()
                         {
@@ -123,7 +107,7 @@ namespace StudentManagement
                         db.SaveChanges();
 
                     }
-                    else if(role == 2)
+                    else if (role.Replace(" ", "").ToLower() == "giảngviên")
                     {
                         int idFaculty = ArrFaculty[comboBox3.SelectedIndex];
                         Teacher teacher = new Teacher()

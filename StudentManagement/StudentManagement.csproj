@@ -58,17 +58,17 @@
     <Compile Include="Account.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
-    <Compile Include="FormChangePassWord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChangePassWord.Designer.cs">
-      <DependentUpon>FormChangePassWord.cs</DependentUpon>
-    </Compile>
     <Compile Include="ClassRoom.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="Faculty.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassWord.Designer.cs">
+      <DependentUpon>FormChangePassWord.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -76,11 +76,29 @@
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListStudent.Designer.cs">
+      <DependentUpon>FormListStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListUsers.Designer.cs">
+      <DependentUpon>FormListUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegester.cs">
       <SubType>Form</SubType>
@@ -93,6 +111,12 @@
     </Compile>
     <Compile Include="FormStudentManagement.Designer.cs">
       <DependentUpon>FormStudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateUser.Designer.cs">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Mark.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
@@ -138,14 +162,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListStudent.resx">
+      <DependentUpon>FormListStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListUsers.resx">
+      <DependentUpon>FormListUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegester.resx">
       <DependentUpon>FormRegester.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStudentManagement.resx">
       <DependentUpon>FormStudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateUser.resx">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

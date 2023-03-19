@@ -32,6 +32,7 @@ namespace StudentManagement
             this.pnlContent = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,10 +51,10 @@ namespace StudentManagement
             // 
             this.pnlContent.BackColor = System.Drawing.Color.White;
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 30);
+            this.pnlContent.Location = new System.Drawing.Point(0, 28);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(800, 420);
+            this.pnlContent.Size = new System.Drawing.Size(800, 422);
             this.pnlContent.TabIndex = 3;
             // 
             // menuStrip1
@@ -66,18 +67,26 @@ namespace StudentManagement
             this.danhSáchTàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trangChủToolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem1,
             this.thoatToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            // 
+            // trangChủToolStripMenuItem
+            // 
+            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.trangChủToolStripMenuItem.Text = "Trang chủ";
+            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem1
             // 
@@ -89,7 +98,7 @@ namespace StudentManagement
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thoatToolStripMenuItem.Text = "Đăng xuất";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
@@ -101,7 +110,7 @@ namespace StudentManagement
             this.giaoVienToolStripMenuItem1,
             this.lopHocToolStripMenuItem});
             this.quanLyToolStripMenuItem.Name = "quanLyToolStripMenuItem";
-            this.quanLyToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
+            this.quanLyToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.quanLyToolStripMenuItem.Text = "Quản lý";
             // 
             // sinhVienToolStripMenuItem
@@ -109,6 +118,7 @@ namespace StudentManagement
             this.sinhVienToolStripMenuItem.Name = "sinhVienToolStripMenuItem";
             this.sinhVienToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sinhVienToolStripMenuItem.Text = "Sinh viên";
+            this.sinhVienToolStripMenuItem.Click += new System.EventHandler(this.sinhVienToolStripMenuItem_Click);
             // 
             // monHocToolStripMenuItem
             // 
@@ -134,25 +144,25 @@ namespace StudentManagement
             this.dangKyToolStripMenuItem,
             this.traCuuDiemToolStripMenuItem});
             this.chucNangToolStripMenuItem.Name = "chucNangToolStripMenuItem";
-            this.chucNangToolStripMenuItem.Size = new System.Drawing.Size(93, 26);
+            this.chucNangToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.chucNangToolStripMenuItem.Text = "Chức năng";
             // 
             // dangKyToolStripMenuItem
             // 
             this.dangKyToolStripMenuItem.Name = "dangKyToolStripMenuItem";
-            this.dangKyToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.dangKyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dangKyToolStripMenuItem.Text = "Đăng ký môn học";
             // 
             // traCuuDiemToolStripMenuItem
             // 
             this.traCuuDiemToolStripMenuItem.Name = "traCuuDiemToolStripMenuItem";
-            this.traCuuDiemToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.traCuuDiemToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.traCuuDiemToolStripMenuItem.Text = "Tra cứu điểm";
             // 
             // danhSáchTàiKhoảnToolStripMenuItem
             // 
             this.danhSáchTàiKhoảnToolStripMenuItem.Name = "danhSáchTàiKhoảnToolStripMenuItem";
-            this.danhSáchTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.danhSáchTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.danhSáchTàiKhoảnToolStripMenuItem.Text = "Danh sách tài khoản";
             this.danhSáchTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.danhSáchTàiKhoảnToolStripMenuItem_Click);
             // 
@@ -190,5 +200,6 @@ namespace StudentManagement
         private System.Windows.Forms.ToolStripMenuItem traCuuDiemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem danhSáchTàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
     }
 }

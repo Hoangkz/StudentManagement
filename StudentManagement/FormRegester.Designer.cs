@@ -30,6 +30,9 @@ namespace StudentManagement
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,10 +59,8 @@ namespace StudentManagement
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -68,7 +69,6 @@ namespace StudentManagement
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +88,36 @@ namespace StudentManagement
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(484, 444);
             this.panel1.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.comboBox3);
+            this.panel10.Controls.Add(this.label9);
+            this.panel10.Location = new System.Drawing.Point(3, 320);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(481, 39);
+            this.panel10.TabIndex = 9;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Enabled = false;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(165, 3);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(303, 28);
+            this.comboBox3.TabIndex = 4;
+            this.comboBox3.Tag = "";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Khoa:";
             // 
             // panel9
             // 
@@ -358,36 +388,6 @@ namespace StudentManagement
             this.label1.Text = "Tên tài khoản:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.comboBox3);
-            this.panel10.Controls.Add(this.label9);
-            this.panel10.Location = new System.Drawing.Point(3, 320);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(481, 39);
-            this.panel10.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 20);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Khoa:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Enabled = false;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(165, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(303, 28);
-            this.comboBox3.TabIndex = 4;
-            this.comboBox3.Tag = "";
-            // 
             // FormRegester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -399,6 +399,8 @@ namespace StudentManagement
             this.Text = "Đăng ký tài khoản";
             this.Load += new System.EventHandler(this.FormRegester_Load);
             this.panel1.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -415,8 +417,6 @@ namespace StudentManagement
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -17,6 +17,8 @@ namespace StudentManagement
         {
             idUser = id;
             InitializeComponent();
+            FormMain formMain = new FormMain();
+            AddForm(formMain);
         }
 
         private void FormStudentManagement_Load(object sender, EventArgs e)
@@ -30,7 +32,8 @@ namespace StudentManagement
 
         private void danhSáchTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormListUsers formListUsers = new FormListUsers();
+            AddForm(formListUsers);
         }
         private void AddForm(Form form)
         {
@@ -41,7 +44,15 @@ namespace StudentManagement
             form.Dock = DockStyle.Fill;
             this.Text = form.Text;
             this.pnlContent.Controls.Add(form);
+            this.Width = form.Width+10;
+            this.Height = form.Height+50;
             form.Show();
+            Screen screen = Screen.FromControl(this);
+            int x = (screen.WorkingArea.Width - this.Width) / 2 + screen.WorkingArea.Left;
+            int y = (screen.WorkingArea.Height - this.Height) / 2 + screen.WorkingArea.Top;
+            this.Location = new Point(x, y);
+
+
         }
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,8 +62,20 @@ namespace StudentManagement
         private void tàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             User user = new User(idUser);
-            //AddForm(user);
-            user.ShowDialog();
+            AddForm(user);
+            //user.ShowDialog();
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMain formMain = new FormMain();
+            AddForm(formMain);
+        }
+
+        private void sinhVienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListStudent formListStudent = new FormListStudent();
+            AddForm(formListStudent);
         }
     }
 }

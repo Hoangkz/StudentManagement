@@ -29,7 +29,8 @@ namespace StudentManagement
                 {
                     if (query.isUser)
                     {
-                        if(query.Role == 4)
+                        string Role = query.Role.Replace(" ", "").ToLower();
+                        if (Role == "admin")
                         {
                             textBox2.Text = "";
                             this.Hide();
@@ -37,17 +38,17 @@ namespace StudentManagement
                             st.ShowDialog();
                             this.Show();
                         }
-                        else if(query.Role == 3)
+                        else if(Role == "nhânviên")
                         {
                             string text = "Nhân viên " + query.UserName;
                             MessageBox.Show(text, "Thông báo");
                         }
-                        else if (query.Role == 2)
+                        else if (Role == "giảngviên")
                         {
                             string text = "Giảng viên: " + query.UserName;
                             MessageBox.Show(text, "Thông báo");
                         }
-                        else if (query.Role == 1)
+                        else if (Role == "sinhviên")
                         {
                             string text = "Sinh viên " + query.UserName;
                             MessageBox.Show(text, "Thông báo");

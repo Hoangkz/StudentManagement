@@ -54,17 +54,8 @@ namespace StudentManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(button1.Text == "Cập nhật")
-            {
-                button1.Text = "Lưu";
-                textBox2.Enabled = true;
-                textBox3.Enabled = true;
-                textBox4.Enabled = true;
-                comboBox1.Enabled = true;
-                dateTimePicker1.Enabled = true;
-                textBox2.Focus();
-            }
-            else if (button1.Text == "Lưu")
+            
+            if (button1.Text == "Lưu")
             {
                 try
                 {
@@ -93,6 +84,20 @@ namespace StudentManagement
                 {
                     MessageBox.Show("Lỗi server", "Thông báo");
                 }
+            }
+            else if(button1.Text == "Cập nhật")
+            {
+                button1.Text = "Lưu";
+                textBox2.Enabled = true;
+                textBox3.Enabled = true;
+                textBox4.Enabled = true;
+                comboBox1.Enabled = true;
+                dateTimePicker1.Enabled = true;
+                textBox2.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi server", "Thông báo");
             }
         }
     }
