@@ -12,6 +12,7 @@ namespace StudentManagement
 {
     public partial class FormLogin : Form
     {
+        StudentManagementEntities db = new StudentManagementEntities();
         public FormLogin()
         {
             InitializeComponent();
@@ -19,10 +20,58 @@ namespace StudentManagement
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            FormStudentManagement st = new FormStudentManagement();
-            this.Hide();
-            st.ShowDialog();
-            this.Show();
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+            if (username.Length>0 && password.Length>0)
+            {
+                var query = db.Account.Where(a => a.UserName == username && a.PassWord == password).FirstOrDefault();
+                if (query != null)
+                {
+                    if (query.isUser)
+                    {
+                        if(query.Role == 4)
+                        {
+                            textBox2.Text = "";
+                            this.Hide();
+                            FormStudentManagement st = new FormStudentManagement(query.Id);
+                            st.ShowDialog();
+                            this.Show();
+                        }
+                        else if(query.Role == 3)
+                        {
+                            string text = "Nhân viên " + query.UserName;
+                            MessageBox.Show(text, "Thông báo");
+                        }
+                        else if (query.Role == 2)
+                        {
+                            string text = "Giảng viên: " + query.UserName;
+                            MessageBox.Show(text, "Thông báo");
+                        }
+                        else if (query.Role == 1)
+                        {
+                            string text = "Sinh viên " + query.UserName;
+                            MessageBox.Show(text, "Thông báo");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tài khoản của bạn chưa được cấp quyền truy cập", "Thông báo");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản của bạn chưa được cấp quyền truy cập", "Thông báo");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!", "Thông báo");
+                }
+
+            }
+            else
+            {
+               MessageBox.Show("Hãy nhập tên tài khoản và mật khẩu!","Thông báo");
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,6 +90,19 @@ namespace StudentManagement
             {
                 e.Cancel = true;
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            FormRegester formRegester = new FormRegester();
+            formRegester.ShowDialog();
+            this.Show();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

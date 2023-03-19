@@ -16,13 +16,12 @@ namespace StudentManagement
         public Form1()
         {
             InitializeComponent();
-            editAccount();
+            addAccount();
             loaddata();
         }
         #region methods
         void loaddata()
         {
-
             /*
             var query = from c in db.Accounts 
                         where c.Id == 1 || c.Id ==2
@@ -38,13 +37,13 @@ namespace StudentManagement
         void addAccount()
         {
             //add
-            Account accounts = new Account()
+            Account account = new Account()
             {
-                UserName = "Hoang6",
+                UserName = "Hoang633",
                 PassWord = "Hoang1"
             };
 
-            db.Account.Add(accounts);
+            db.Account.Add(account);
             db.SaveChanges();
         }
         void deleteAccount()
