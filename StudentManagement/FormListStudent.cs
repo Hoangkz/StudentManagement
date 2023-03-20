@@ -24,14 +24,20 @@ namespace StudentManagement
         private void LoadDataAccount()
         {
             var listAccount = from c in db.Account
-                              where(c.Role.Replace(" ","").ToLower() =="sinhviên" && c.isUser==true)
-                              select c;
+                              join u in db.Student 
+                              on c.Id equals u.idUser
+                              join classRoomJoin in db.ClassRoom on u.IdClass equals classRoomJoin.IdClass into classRoomGroup
+                              from classRoom in classRoomGroup.DefaultIfEmpty()
+                              where (c.Role.Replace(" ","").ToLower() =="sinhviên" && c.isUser==true)
+                              select new { c.Id, c.FullName, c.Gender, c.DateOfBirth, c.Phone, c.Email,
+                                  Class = classRoom != null ? classRoom.ClassName : "Chưa xếp lớp"
+                              };
             dgvAccount.DataSource = listAccount.ToList();
-            dgvAccount.Columns["Role"].HeaderText = "Loại TK";
+            dgvAccount.Columns["FullName"].HeaderText = "Họ và tên";
+            dgvAccount.Columns["Gender"].HeaderText = "Giới tính";
+            dgvAccount.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
+            dgvAccount.Columns["Class"].HeaderText = "Lớp";
 
-            dgvAccount.Columns["Student"].Visible = false;
-            dgvAccount.Columns["Teacher"].Visible = false;
-            dgvAccount.Columns["PassWord"].Visible = false;
             db.SaveChanges();
 
         }
@@ -68,14 +74,6 @@ namespace StudentManagement
             dgvAccount.Columns["PassWord"].Visible = false;
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            txtID.Text = "";
-            textBox1.Text = "";
-            LoadDataAccount();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             FormRegester formRegester = new FormRegester();
@@ -83,50 +81,5 @@ namespace StudentManagement
             LoadDataAccount();
         }
 
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (dgvAccount.SelectedRows.Count > 0)
-            {
-                try
-                {
-                    int Id = int.Parse(dgvAccount.SelectedRows[0].Cells[0].Value.ToString());
-                    var deleteAccount = db.Account.Find(Id);
-                    if (deleteAccount != null)
-                    {
-                        string message = "Bạn có chắc chắn muốn xóa tài khoản: " + deleteAccount.UserName + " hay không?";
-
-                        DialogResult result = MessageBox.Show(message, "Xóa Account", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            string text = "Xoá tài khoản: " + deleteAccount.UserName + " Thành công!";
-                            db.Account.Remove(deleteAccount);
-                            db.SaveChanges();
-                            MessageBox.Show(text);
-                            LoadDataAccount();
-                        }
-                    }
-                    else
-                    {
-                        string text = "Không tìm thấy tài khoản cần xoá";
-                        MessageBox.Show(text);
-                    }
-
-                }
-                catch { string text = "Lỗi server"; MessageBox.Show(text); }
-            }
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int Id = int.Parse(dgvAccount.SelectedRows[0].Cells[0].Value.ToString());
-                FormUpdateUser formUpdateUser = new FormUpdateUser(Id);
-                formUpdateUser.ShowDialog();
-            }
-            catch { }
-        }
     }
 }
