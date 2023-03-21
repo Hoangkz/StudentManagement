@@ -41,6 +41,7 @@ namespace StudentManagement
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -122,6 +123,7 @@ namespace StudentManagement
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
@@ -162,14 +164,14 @@ namespace StudentManagement
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Location = new System.Drawing.Point(9, 100);
+            this.dgvAccount.Location = new System.Drawing.Point(4, 95);
             this.dgvAccount.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAccount.MultiSelect = false;
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.ReadOnly = true;
             this.dgvAccount.RowHeadersWidth = 51;
             this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAccount.Size = new System.Drawing.Size(952, 432);
+            this.dgvAccount.Size = new System.Drawing.Size(957, 432);
             this.dgvAccount.TabIndex = 11;
             // 
             // panel1
@@ -181,6 +183,19 @@ namespace StudentManagement
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1180, 541);
             this.panel1.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 304);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 41);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Detail";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormListStudent
             // 
@@ -215,5 +230,6 @@ namespace StudentManagement
         private System.Windows.Forms.Button btnTraCuu;
         private System.Windows.Forms.DataGridView dgvAccount;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

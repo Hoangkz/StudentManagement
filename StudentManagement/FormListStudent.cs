@@ -81,5 +81,10 @@ namespace StudentManagement
             LoadDataAccount();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormDetailStudent formDetailStudent = new FormDetailStudent(dgvAccount.SelectedRows[0]);
+            formDetailStudent.ShowDialog();
+        }
     }
 }
