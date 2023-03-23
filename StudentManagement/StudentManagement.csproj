@@ -118,6 +118,18 @@
     <Compile Include="FormStudentManagement.Designer.cs">
       <DependentUpon>FormStudentManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListSubject.Designer.cs">
+      <DependentUpon>FormListSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubject.Designer.cs">
+      <DependentUpon>FormSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormStudentManagement.resx">
       <DependentUpon>FormStudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListSubject.resx">
+      <DependentUpon>FormListSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubject.resx">
+      <DependentUpon>FormSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateUser.resx">
       <DependentUpon>FormUpdateUser.cs</DependentUpon>
