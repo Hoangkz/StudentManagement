@@ -61,14 +61,14 @@
     <Compile Include="ClassRoom.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
+    <Compile Include="Faculty.cs">
+      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormDetailStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDetailStudent.Designer.cs">
       <DependentUpon>FormDetailStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Faculty.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="FormChangePassWord.cs">
       <SubType>Form</SubType>
@@ -148,9 +148,6 @@
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
