@@ -56,19 +56,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="ClassRoom.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty.cs">
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="FormDetailStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDetailStudent.Designer.cs">
       <DependentUpon>FormDetailStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Faculty.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="FormChangePassWord.cs">
       <SubType>Form</SubType>
@@ -137,36 +137,36 @@
       <DependentUpon>FormUpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Mark.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelStudentManage.Context.cs">
+    <Compile Include="ModelStudentManagement.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelStudentManage.Context.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelStudentManage.cs">
+    <Compile Include="ModelStudentManagement.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelStudentManage.Designer.cs">
+    <Compile Include="ModelStudentManagement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
+      <DependentUpon>ModelStudentManagement.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+      <DependentUpon>ModelStudentManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
       <SubType>Form</SubType>
@@ -224,12 +224,12 @@
     </EmbeddedResource>
     <None Include=".env" />
     <None Include="App.Config" />
-    <EntityDeploy Include="ModelStudentManage.edmx">
+    <EntityDeploy Include="ModelStudentManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelStudentManage.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelStudentManagement.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelStudentManage.edmx.diagram">
-      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
+    <None Include="ModelStudentManagement.edmx.diagram">
+      <DependentUpon>ModelStudentManagement.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -246,15 +246,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelStudentManage.Context.tt">
+    <Content Include="ModelStudentManagement.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
-      <LastGenOutput>ModelStudentManage.Context.cs</LastGenOutput>
+      <DependentUpon>ModelStudentManagement.edmx</DependentUpon>
+      <LastGenOutput>ModelStudentManagement.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelStudentManage.tt">
+    <Content Include="ModelStudentManagement.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
-      <LastGenOutput>ModelStudentManage.cs</LastGenOutput>
+      <DependentUpon>ModelStudentManagement.edmx</DependentUpon>
+      <LastGenOutput>ModelStudentManagement.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

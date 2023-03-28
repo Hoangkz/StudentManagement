@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaMH = new System.Windows.Forms.TextBox();
-            this.txtGV = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenMH = new System.Windows.Forms.TextBox();
+            this.ChonGV = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -66,15 +66,6 @@
             this.txtMaMH.Name = "txtMaMH";
             this.txtMaMH.Size = new System.Drawing.Size(156, 27);
             this.txtMaMH.TabIndex = 1;
-            // 
-            // txtGV
-            // 
-            this.txtGV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGV.Location = new System.Drawing.Point(141, 153);
-            this.txtGV.Name = "txtGV";
-            this.txtGV.Size = new System.Drawing.Size(156, 27);
-            this.txtGV.TabIndex = 1;
             // 
             // btnLuu
             // 
@@ -120,21 +111,33 @@
             this.txtTenMH.TabIndex = 1;
             this.txtTenMH.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // ChonGV
+            // 
+            this.ChonGV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChonGV.FormattingEnabled = true;
+            this.ChonGV.Items.AddRange(new object[] {
+            "dm son",
+            "son lua ae"});
+            this.ChonGV.Location = new System.Drawing.Point(141, 155);
+            this.ChonGV.Name = "ChonGV";
+            this.ChonGV.Size = new System.Drawing.Size(156, 27);
+            this.ChonGV.TabIndex = 3;
+            // 
             // FormSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 213);
+            this.Controls.Add(this.ChonGV);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtGV);
             this.Controls.Add(this.txtTenMH);
             this.Controls.Add(this.txtMaMH);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "FormSubject";
-            this.Text = "FormSubject";
+            this.Text = "Form thêm môn học";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,10 +148,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaMH;
-        private System.Windows.Forms.TextBox txtGV;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenMH;
+        private System.Windows.Forms.ComboBox ChonGV;
     }
 }
