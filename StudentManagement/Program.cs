@@ -16,8 +16,8 @@ namespace StudentManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormStudentManagement(2030));
-            //Application.Run(new FormLogin());
+            //Application.Run(new FormStudentManagement(2030));
+            Application.Run(new FormLogin());
         }
     }
 }
