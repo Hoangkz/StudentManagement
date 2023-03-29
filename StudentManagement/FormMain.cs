@@ -16,5 +16,49 @@ namespace StudentManagement
         {
             InitializeComponent();
         }
+
+        private void buttongiangvien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonsinhvien_Click(object sender, EventArgs e)
+        {
+            // Tạo đối tượng của form muốn chuyển đến
+            FormListStudent FormListStudent = new FormListStudent();
+
+            // Hiển thị form
+            FormListStudent.Show();
+
+            // Ẩn form hiện tại
+            //this.Hide();
+        }
+
+        private void buttondanhsachtaikhoan_Click(object sender, EventArgs e)
+        {
+            // Tạo đối tượng của form muốn chuyển đến
+            FormListUsers FormListUsers = new FormListUsers();
+
+            // Hiển thị form
+            FormListUsers.Show();
+
+            // Ẩn form hiện tại
+            //this.Hide();
+        }
+
+        private void buttonmonhoc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonlophoc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttontaikhoan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
