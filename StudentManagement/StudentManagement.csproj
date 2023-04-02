@@ -64,6 +64,12 @@
     <Compile Include="Faculty.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormAddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddClass.Designer.cs">
+      <DependentUpon>FormAddClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDetailStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListClass.Designer.cs">
+      <DependentUpon>FormListClass.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListStudent.cs">
       <SubType>Form</SubType>
@@ -159,6 +171,9 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAddClass.resx">
+      <DependentUpon>FormAddClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDetailStudent.resx">
       <DependentUpon>FormDetailStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListClass.resx">
+      <DependentUpon>FormListClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListStudent.resx">
       <DependentUpon>FormListStudent.cs</DependentUpon>
@@ -201,7 +219,6 @@
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include=".env" />
     <None Include="App.Config" />
     <EntityDeploy Include="ModelStudentManage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

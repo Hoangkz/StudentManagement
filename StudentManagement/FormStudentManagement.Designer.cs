@@ -84,21 +84,21 @@ namespace StudentManagement
             // trangChủToolStripMenuItem
             // 
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
             this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem1
             // 
             this.tàiKhoảnToolStripMenuItem1.Name = "tàiKhoảnToolStripMenuItem1";
-            this.tàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.tàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(160, 26);
             this.tàiKhoảnToolStripMenuItem1.Text = "Tài khoản";
             this.tàiKhoảnToolStripMenuItem1.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem1_Click);
             // 
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.thoatToolStripMenuItem.Text = "Đăng xuất";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
@@ -137,6 +137,7 @@ namespace StudentManagement
             this.lopHocToolStripMenuItem.Name = "lopHocToolStripMenuItem";
             this.lopHocToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.lopHocToolStripMenuItem.Text = "Lớp học";
+            this.lopHocToolStripMenuItem.Click += new System.EventHandler(this.lopHocToolStripMenuItem_Click);
             // 
             // chucNangToolStripMenuItem
             // 
@@ -150,13 +151,13 @@ namespace StudentManagement
             // dangKyToolStripMenuItem
             // 
             this.dangKyToolStripMenuItem.Name = "dangKyToolStripMenuItem";
-            this.dangKyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dangKyToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.dangKyToolStripMenuItem.Text = "Đăng ký môn học";
             // 
             // traCuuDiemToolStripMenuItem
             // 
             this.traCuuDiemToolStripMenuItem.Name = "traCuuDiemToolStripMenuItem";
-            this.traCuuDiemToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.traCuuDiemToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.traCuuDiemToolStripMenuItem.Text = "Tra cứu điểm";
             // 
             // danhSáchTàiKhoảnToolStripMenuItem
