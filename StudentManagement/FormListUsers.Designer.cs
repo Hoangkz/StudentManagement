@@ -34,6 +34,7 @@ namespace StudentManagement
             this.txtID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@ namespace StudentManagement
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,14 +70,14 @@ namespace StudentManagement
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccount.Location = new System.Drawing.Point(12, 95);
             this.dgvAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvAccount.MultiSelect = false;
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.ReadOnly = true;
             this.dgvAccount.RowHeadersWidth = 51;
             this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAccount.Size = new System.Drawing.Size(952, 486);
             this.dgvAccount.TabIndex = 11;
-            this.dgvAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellContentClick);
+            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
+            this.dgvAccount.SelectionChanged += new System.EventHandler(this.dgvAccount_SelectionChanged);
             // 
             // btnTraCuu
             // 
@@ -87,7 +87,7 @@ namespace StudentManagement
             this.btnTraCuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new System.Drawing.Size(178, 41);
-            this.btnTraCuu.TabIndex = 10;
+            this.btnTraCuu.TabIndex = 21;
             this.btnTraCuu.Text = "Find";
             this.btnTraCuu.UseVisualStyleBackColor = true;
             this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
@@ -127,17 +127,30 @@ namespace StudentManagement
             this.panel2.Location = new System.Drawing.Point(968, 77);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(206, 504);
-            this.panel2.TabIndex = 16;
+            this.panel2.TabIndex = 20;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(11, 402);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(176, 41);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "CheckUser";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(14, 397);
+            this.button4.Location = new System.Drawing.Point(12, 353);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(176, 41);
-            this.button4.TabIndex = 21;
+            this.button4.TabIndex = 23;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -150,7 +163,7 @@ namespace StudentManagement
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 41);
-            this.button3.TabIndex = 20;
+            this.button3.TabIndex = 22;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -159,11 +172,11 @@ namespace StudentManagement
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 446);
+            this.button2.Location = new System.Drawing.Point(12, 451);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 44);
-            this.button2.TabIndex = 19;
+            this.button2.TabIndex = 25;
             this.button2.Text = "Create";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -175,7 +188,7 @@ namespace StudentManagement
             this.panel6.Location = new System.Drawing.Point(3, 204);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(197, 30);
-            this.panel6.TabIndex = 18;
+            this.panel6.TabIndex = 19;
             // 
             // button1
             // 
@@ -252,7 +265,7 @@ namespace StudentManagement
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
-            this.label4.TabIndex = 14;
+            this.label4.TabIndex = 17;
             this.label4.Text = "Họ và tên";
             // 
             // textBox1
@@ -294,24 +307,11 @@ namespace StudentManagement
             this.label1.TabIndex = 12;
             this.label1.Text = "Danh sách Account";
             // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(12, 348);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(176, 41);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "CheckUser";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // FormListUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 608);
+            this.ClientSize = new System.Drawing.Size(1199, 620);
             this.Controls.Add(this.panel1);
             this.Name = "FormListUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
