@@ -83,5 +83,11 @@ namespace StudentManagement
             FormListClass formListClass = new FormListClass();
             AddForm(formListClass);
         }
+
+        private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegesterSubject formRegesterSubject = new FormRegesterSubject();
+            AddForm(formRegesterSubject);
+        }
     }
 }

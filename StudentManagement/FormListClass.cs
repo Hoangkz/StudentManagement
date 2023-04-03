@@ -200,7 +200,6 @@ namespace StudentManagement
         {
             try
             {
-                Console.WriteLine(btnUpdate.Text);
                 if (btnUpdate.Text == "Cập nhật")
                 {
                     idClass = int.Parse(dbLopHocShow.SelectedRows[0].Cells[0].Value.ToString());
