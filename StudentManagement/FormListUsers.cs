@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace StudentManagement
 {
@@ -25,13 +28,10 @@ namespace StudentManagement
         private void LoadDataAccount()
         {
             var listAccount = from c in db.Account
-                          select c;
+                              select new {c.Id, c.UserName, c.Role, c.FullName,c.Gender,c.DateOfBirth,c.Phone,c.Email,c.isUser};
             dgvAccount.DataSource = listAccount.ToList();
             dgvAccount.Columns["Role"].HeaderText = "Loại TK";
 
-            dgvAccount.Columns["Student"].Visible = false;
-            dgvAccount.Columns["Teacher"].Visible = false;
-            dgvAccount.Columns["PassWord"].Visible = false;
             db.SaveChanges();
 
         }
@@ -50,7 +50,7 @@ namespace StudentManagement
             string Role = (string)comboBox1.SelectedItem;
             string Role2 = Role.Replace(" ","").ToLower();
             var account = from c in db.Account
-                          select c;
+                          select new { c.Id, c.UserName, c.Role, c.FullName, c.Gender, c.DateOfBirth, c.Phone, c.Email, c.isUser };
 
             if (Id != 0)
             {
@@ -75,10 +75,6 @@ namespace StudentManagement
             }
             dgvAccount.DataSource = account.ToList();
             dgvAccount.Columns["Role"].HeaderText = "Loại TK";
-
-            dgvAccount.Columns["Student"].Visible = false;
-            dgvAccount.Columns["Teacher"].Visible = false;
-            dgvAccount.Columns["PassWord"].Visible = false;
         }
 
         private void dgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -227,6 +223,63 @@ namespace StudentManagement
                 button4.Enabled = false;
             }
 
+        }
+        private void ExportToExcel(DataGridView dataGridView, string text="excel")
+        {
+            // Tạo đối tượng Excel và mở một workbook mới
+            Excel.Application excel = new Excel.Application();
+            Excel.Workbook workbook = excel.Workbooks.Add(Type.Missing);
+
+            // Tạo một worksheet và đặt tên cho nó
+            Excel.Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "ExportedFromDataGridView";
+
+            // Thêm tiêu đề cho bảng
+            for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+                Excel.Range headerRange = worksheet.Range[worksheet.Cells[1, i], worksheet.Cells[1, i]];
+                headerRange.Font.Bold = true;
+                headerRange.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Black);
+                headerRange.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Gold);
+                headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+                headerRange.RowHeight = 30;
+            }
+            // Thêm dữ liệu vào bảng
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            Excel.Range columnsRange = worksheet.Range[worksheet.Cells[1, 1], worksheet.Cells[dataGridView.Rows.Count + 1, dataGridView.Columns.Count]];
+            columnsRange.Columns.AutoFit();
+            columnsRange.RowHeight = 22;
+            // Hiển thị dialog để người dùng chọn nơi lưu file
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+            saveDialog.FilterIndex = 2;
+            saveDialog.FileName = text;
+            saveDialog.RestoreDirectory = true;
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveDialog.FileName, Excel.XlFileFormat.xlOpenXMLWorkbook, Type.Missing,
+                    Type.Missing, false, false, Excel.XlSaveAsAccessMode.xlNoChange,
+                    Excel.XlSaveConflictResolution.xlUserResolution, true, Type.Missing, Type.Missing, Type.Missing);
+            }
+
+            // Đóng workbook và Excel
+            workbook.Close(true, Type.Missing, Type.Missing);
+            excel.Quit();
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string text = label1.Text;
+            ExportToExcel(dgvAccount, text);
         }
     }
 }
