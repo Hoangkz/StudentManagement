@@ -156,7 +156,7 @@
     <Compile Include="Subject.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
+    <Compile Include="sysdiagrams.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
