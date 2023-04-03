@@ -201,11 +201,11 @@ namespace StudentManagement
             try
             {
                 Console.WriteLine(btnUpdate.Text);
-                if (btnUpdate.Text == "Sửa")
+                if (btnUpdate.Text == "Cập nhật")
                 {
                     idClass = int.Parse(dbLopHocShow.SelectedRows[0].Cells[0].Value.ToString());
                     txtClassname.Text = dbLopHocShow.SelectedRows[0].Cells[1].Value.ToString();
-                    comboBox1.SelectedItem = dbLopHocShow.SelectedRows[0].Cells[2].Value.ToString();
+                    comboBox1.SelectedItem = dbLopHocShow.SelectedRows[0].Cells[3].Value.ToString();
                     btnUpdate.Text = "Lưu lại";
                 }
                 else if (btnUpdate.Text == "Lưu lại")
@@ -229,7 +229,7 @@ namespace StudentManagement
                             txtIdClass.Text = "";
                             txtClassname.Text = "";
                             comboBox1.SelectedIndex = 0;
-                            btnUpdate.Text = "Sửa";
+                            btnUpdate.Text = "Cập nhật";
                             idClass = 0;
                             LoadListClass();
                         }
@@ -265,7 +265,7 @@ namespace StudentManagement
             txtIdClass.Text = "";
             txtClassname.Text = "";
             comboBox1.SelectedIndex = 0;
-            btnUpdate.Text = "Sửa";
+            btnUpdate.Text = "Cập nhật";
             idClass = 0;
             LoadListClass();
         }
