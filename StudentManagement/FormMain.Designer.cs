@@ -66,7 +66,7 @@ namespace StudentManagement
             this.buttongiangvien.Name = "buttongiangvien";
             this.buttongiangvien.Size = new System.Drawing.Size(220, 58);
             this.buttongiangvien.TabIndex = 1;
-            this.buttongiangvien.Text = "Quản lý giảng viên\r\n\r\nĐặng Ngọc Sang\r\n";
+            this.buttongiangvien.Text = "Quản lý giảng viên";
             this.buttongiangvien.UseVisualStyleBackColor = true;
             this.buttongiangvien.Click += new System.EventHandler(this.buttongiangvien_Click);
             // 
@@ -76,7 +76,7 @@ namespace StudentManagement
             this.buttonlophoc.Name = "buttonlophoc";
             this.buttonlophoc.Size = new System.Drawing.Size(220, 58);
             this.buttonlophoc.TabIndex = 1;
-            this.buttonlophoc.Text = "Quản lý lớp học\r\n\r\nPhạm Đức Hiệp\r\n";
+            this.buttonlophoc.Text = "Quản lý lớp học";
             this.buttonlophoc.UseVisualStyleBackColor = true;
             this.buttonlophoc.Click += new System.EventHandler(this.buttonlophoc_Click);
             // 
@@ -96,7 +96,7 @@ namespace StudentManagement
             this.buttonmonhoc.Name = "buttonmonhoc";
             this.buttonmonhoc.Size = new System.Drawing.Size(220, 58);
             this.buttonmonhoc.TabIndex = 1;
-            this.buttonmonhoc.Text = "Quản lý môn học\r\n\r\nNguyễn Đăng Khoa\r\n";
+            this.buttonmonhoc.Text = "Quản lý môn học";
             this.buttonmonhoc.UseVisualStyleBackColor = true;
             this.buttonmonhoc.Click += new System.EventHandler(this.buttonmonhoc_Click);
             // 
@@ -106,7 +106,7 @@ namespace StudentManagement
             this.buttonsinhvien.Name = "buttonsinhvien";
             this.buttonsinhvien.Size = new System.Drawing.Size(220, 58);
             this.buttonsinhvien.TabIndex = 1;
-            this.buttonsinhvien.Text = "Quản lý sinh viên \r\n\r\nPhạm Thị Hương Trà";
+            this.buttonsinhvien.Text = "Quản lý sinh viên";
             this.buttonsinhvien.UseVisualStyleBackColor = true;
             this.buttonsinhvien.Click += new System.EventHandler(this.buttonsinhvien_Click);
             // 
@@ -133,7 +133,7 @@ namespace StudentManagement
             this.Controls.Add(this.buttongiangvien);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.Text = "Hệ thống quản lý sinh viên";
             this.ResumeLayout(false);
