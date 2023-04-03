@@ -75,6 +75,7 @@ namespace StudentManagement
             }
             dgvAccount.DataSource = account.ToList();
             dgvAccount.Columns["Role"].HeaderText = "Loại TK";
+
         }
 
         private void dgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
