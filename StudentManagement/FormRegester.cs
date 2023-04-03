@@ -65,7 +65,7 @@ namespace StudentManagement
 
         private void buttonRegester_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
+             string username = textBox1.Text;
             string password = textBox2.Text;
             string role = comboBox1.SelectedItem.ToString();
           

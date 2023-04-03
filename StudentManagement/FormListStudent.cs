@@ -26,9 +26,10 @@ namespace StudentManagement
             var listAccount = from c in db.Account
                               join u in db.Student 
                               on c.Id equals u.idUser
-                              join classRoomJoin in db.ClassRoom on u.IdClass equals classRoomJoin.IdClass into classRoomGroup
-                              from classRoom in classRoomGroup.DefaultIfEmpty()
-                              where (c.Role.Replace(" ","").ToLower() =="sinhviên" && c.isUser==true)
+
+                              
+                              join classRoomJoin in db.ClassRoom on u.IdClass equals classRoomJoin.IdClass 
+                              into classRoomGroup from classRoom in classRoomGroup.DefaultIfEmpty() where (c.Role.Replace(" ","").ToLower() =="sinhviên" && c.isUser==true)
                               select new { c.Id, c.FullName, c.Gender, c.DateOfBirth, c.Phone, c.Email,
                                   Class = classRoom != null ? classRoom.ClassName : "Chưa xếp lớp"
                               };
