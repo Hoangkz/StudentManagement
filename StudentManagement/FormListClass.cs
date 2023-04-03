@@ -34,10 +34,11 @@ namespace StudentManagement
                                 join u in db.Teacher
                                 on c.IdTeacher equals u.IdTeacher
                                 join acc in db.Account on u.idUser equals acc.Id 
-                                select new { c.IdClass, c.ClassName, acc.FullName };
+                                select new { c.IdClass, c.ClassName,u.IdTeacher, acc.FullName };
                                 dbLopHocShow.DataSource = listClassRoom.ToList();
-                                dbLopHocShow.Columns["IdClass"].HeaderText = "ID";
+                                dbLopHocShow.Columns["IdClass"].HeaderText = "ID Class";
                                 dbLopHocShow.Columns["ClassName"].HeaderText = "Tên Lớp";
+                                dbLopHocShow.Columns["IdTeacher"].HeaderText = "ID Teacher";
                                 dbLopHocShow.Columns["FullName"].HeaderText = " Giảng Viên ";
 
             var listTeacher = from c in db.Teacher
@@ -62,6 +63,12 @@ namespace StudentManagement
                 classID = int.Parse(txtIdClass.Text);
             }
             catch { }
+            int teacherID = 0;
+            try
+            {
+                teacherID = int.Parse(textBox1.Text);
+            }
+            catch { }
             string teacherName = comboBox1.Text;
             string ClassName = txtClassname.Text;
 
@@ -70,12 +77,17 @@ namespace StudentManagement
                                 on c.IdTeacher equals u.IdTeacher
                                 join acc in db.Account on u.idUser equals acc.Id
 
-                                select new { c.IdClass, c.ClassName, acc.FullName };
+                                select new { c.IdClass, c.ClassName,u.IdTeacher, acc.FullName };
 
             
             if (classID != 0)
             {
                 listClassRoom = listClassRoom.Where(c => c.IdClass == classID);
+            }
+
+            if (teacherID != 0)
+            {
+                listClassRoom = listClassRoom.Where(c => c.IdTeacher == teacherID);
             }
 
             if (ClassName != "")
@@ -89,8 +101,9 @@ namespace StudentManagement
             }
 
             dbLopHocShow.DataSource = listClassRoom.ToList();
-            dbLopHocShow.Columns["IdClass"].HeaderText = "ID";
+            dbLopHocShow.Columns["IdClass"].HeaderText = "ID Class";
             dbLopHocShow.Columns["ClassName"].HeaderText = "Tên Lớp";
+            dbLopHocShow.Columns["IdTeacher"].HeaderText = "ID Teacher";
             dbLopHocShow.Columns["FullName"].HeaderText = " Giảng Viên ";
         }
 
@@ -254,6 +267,7 @@ namespace StudentManagement
             comboBox1.SelectedIndex = 0;
             btnUpdate.Text = "Sửa";
             idClass = 0;
+            LoadListClass();
         }
     }
 
