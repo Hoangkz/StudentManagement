@@ -29,9 +29,9 @@ namespace StudentManagement
             dgvAccount.DataSource = listAccount.ToList();
             dgvAccount.Columns["Role"].HeaderText = "Loại TK";
 
-            dgvAccount.Columns["Student"].Visible = false;
-            dgvAccount.Columns["Teacher"].Visible = false;
-            dgvAccount.Columns["PassWord"].Visible = false;
+            //dgvAccount.Columns["Student"].Visible = false;
+            //dgvAccount.Columns["Teacher"].Visible = false;
+            //dgvAccount.Columns["PassWord"].Visible = false;
             db.SaveChanges();
 
         }
@@ -76,9 +76,9 @@ namespace StudentManagement
             dgvAccount.DataSource = account.ToList();
             dgvAccount.Columns["Role"].HeaderText = "Loại TK";
 
-            dgvAccount.Columns["Student"].Visible = false;
-            dgvAccount.Columns["Teacher"].Visible = false;
-            dgvAccount.Columns["PassWord"].Visible = false;
+            //dgvAccount.Columns["Student"].Visible = false;
+            //dgvAccount.Columns["Teacher"].Visible = false;
+            //dgvAccount.Columns["PassWord"].Visible = false;
         }
 
         private void dgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)

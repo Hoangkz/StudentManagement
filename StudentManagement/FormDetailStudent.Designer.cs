@@ -68,8 +68,9 @@ namespace StudentManagement
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(90, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox1.Location = new System.Drawing.Point(139, 18);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(176, 23);
             this.textBox1.TabIndex = 0;
@@ -83,8 +84,9 @@ namespace StudentManagement
             "Nam",
             "Nữ",
             "Khác"});
-            this.comboBox1.Location = new System.Drawing.Point(348, 40);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.comboBox1.Location = new System.Drawing.Point(514, 18);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(102, 25);
             this.comboBox1.TabIndex = 1;
@@ -93,17 +95,19 @@ namespace StudentManagement
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(547, 45);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(784, 23);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(108, 20);
             this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 3, 28, 15, 30, 30, 0);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(90, 77);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(139, 79);
+
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(176, 23);
             this.textBox2.TabIndex = 3;
@@ -113,8 +117,8 @@ namespace StudentManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(25, 26);
+
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 4;
@@ -124,8 +128,8 @@ namespace StudentManagement
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(276, 45);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(404, 26);
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 5;
@@ -135,8 +139,8 @@ namespace StudentManagement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(468, 43);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(656, 23);
+
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 6;
@@ -146,8 +150,8 @@ namespace StudentManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 82);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(25, 86);
+
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 7;
@@ -157,8 +161,8 @@ namespace StudentManagement
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(276, 84);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(404, 86);
+
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 17);
             this.label5.TabIndex = 8;
@@ -169,12 +173,9 @@ namespace StudentManagement
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Khác"});
-            this.comboBox2.Location = new System.Drawing.Point(332, 78);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.comboBox2.Location = new System.Drawing.Point(466, 81);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(118, 25);
             this.comboBox2.TabIndex = 9;
@@ -183,8 +184,8 @@ namespace StudentManagement
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(468, 84);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(660, 86);
+
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 17);
             this.label6.TabIndex = 10;
@@ -194,8 +195,9 @@ namespace StudentManagement
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(518, 79);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox3.Location = new System.Drawing.Point(744, 81);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(176, 23);
             this.textBox3.TabIndex = 11;
@@ -217,7 +219,8 @@ namespace StudentManagement
             this.button2.Location = new System.Drawing.Point(579, 197);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 46);
+            this.button2.Size = new System.Drawing.Size(114, 44);
+
             this.button2.TabIndex = 14;
             this.button2.Text = "Đăng ký";
             this.button2.UseVisualStyleBackColor = true;
@@ -241,7 +244,8 @@ namespace StudentManagement
             this.button3.Location = new System.Drawing.Point(579, 239);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 46);
+            this.button3.Size = new System.Drawing.Size(114, 44);
+
             this.button3.TabIndex = 16;
             this.button3.Text = "Hủy";
             this.button3.UseVisualStyleBackColor = true;
@@ -252,7 +256,8 @@ namespace StudentManagement
             this.button4.Location = new System.Drawing.Point(579, 154);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 46);
+            this.button4.Size = new System.Drawing.Size(114, 44);
+
             this.button4.TabIndex = 17;
             this.button4.Text = "Tìm kiếm ";
             this.button4.UseVisualStyleBackColor = true;
@@ -264,10 +269,12 @@ namespace StudentManagement
             this.button5.Location = new System.Drawing.Point(579, 281);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(91, 46);
+            this.button5.Size = new System.Drawing.Size(114, 44);
+
             this.button5.TabIndex = 18;
             this.button5.Text = "Đóng";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // menuStrip1
             // 

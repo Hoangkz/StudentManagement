@@ -44,6 +44,8 @@ namespace StudentManagement
         }
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
+
+
             int Id = 0;
             try
             {
@@ -52,27 +54,42 @@ namespace StudentManagement
             catch
             { }
 
+            var listAccount = from c in db.Account
+                              join u in db.Student
+                              on c.Id equals u.idUser
+                              join classRoomJoin in db.ClassRoom on u.IdClass equals classRoomJoin.IdClass into classRoomGroup
+                              from classRoom in classRoomGroup.DefaultIfEmpty()
+                              where (c.Role.Replace(" ", "").ToLower() == "sinhviên" && c.isUser == true)
+                              select new
+                              {
+                                  c.Id,
+                                  c.FullName,
+                                  c.Gender,
+                                  c.DateOfBirth,
+                                  c.Phone,
+                                  c.Email,
+                                  Class = classRoom != null ? classRoom.ClassName : "Chưa xếp lớp"
+                              };
+            
+
             string fullName = textBox1.Text;
 
-            var account = from c in db.Account
-                          where (c.Role.Replace(" ", "").ToLower() == "sinhviên" && c.isUser == true)
-                          select c;
 
             if (Id != 0)
             {
-                account = account.Where(c => c.Id == Id);
+                listAccount = listAccount.Where(c => c.Id == Id);
             }
             if (fullName != "")
             {
-                account = account.Where(c => c.FullName.Contains(fullName));
+                listAccount = listAccount.Where(c => c.FullName.Contains(fullName));
             }
 
-            dgvAccount.DataSource = account.ToList();
-            dgvAccount.Columns["Role"].HeaderText = "Loại TK";
+            dgvAccount.DataSource = listAccount.ToList();
+            dgvAccount.Columns["FullName"].HeaderText = "Họ và tên";
+            dgvAccount.Columns["Gender"].HeaderText = "Giới tính";
+            dgvAccount.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
+            dgvAccount.Columns["Class"].HeaderText = "Lớp";
 
-            dgvAccount.Columns["Student"].Visible = false;
-            dgvAccount.Columns["Teacher"].Visible = false;
-            dgvAccount.Columns["PassWord"].Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,6 +103,36 @@ namespace StudentManagement
         {
             FormDetailStudent formDetailStudent = new FormDetailStudent(dgvAccount.SelectedRows[0]);
             formDetailStudent.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult resuilt;
+            resuilt = MessageBox.Show("Bạn có chắc chắn muốn đóng?", "Thông tin", MessageBoxButtons.YesNo);
+            if (resuilt.ToString() == "Yes")
+            {
+                this.Close();
+            }
+        }
+
+        private void FormListStudent_Load(object sender, EventArgs e)
+        {
+            this.AutoScroll = false;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult resuilt;
+            resuilt = MessageBox.Show("Bạn chắc chắn muốn đóng", "Thông tin", MessageBoxButtons.YesNo);
+            if(resuilt.ToString() == "Yes")
+            {
+                this.Close();
+            }        
         }
     }
 }
