@@ -31,6 +31,12 @@ namespace StudentManagement
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttongiangvien = new System.Windows.Forms.Button();
+            this.buttonlophoc = new System.Windows.Forms.Button();
+            this.buttontaikhoan = new System.Windows.Forms.Button();
+            this.buttonmonhoc = new System.Windows.Forms.Button();
+            this.buttonsinhvien = new System.Windows.Forms.Button();
+            this.buttondanhsachtaikhoan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -40,6 +46,7 @@ namespace StudentManagement
             this.label1.Location = new System.Drawing.Point(251, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 38);
+
             this.label1.TabIndex = 0;
             this.label1.Text = "Hệ thống quản lý sinh viên";
             // 
@@ -49,8 +56,69 @@ namespace StudentManagement
             this.label2.Location = new System.Drawing.Point(379, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 48);
+
             this.label2.TabIndex = 0;
             this.label2.Text = "Nhóm 3";
+            // 
+            // buttongiangvien
+            // 
+            this.buttongiangvien.Location = new System.Drawing.Point(141, 149);
+            this.buttongiangvien.Name = "buttongiangvien";
+            this.buttongiangvien.Size = new System.Drawing.Size(220, 58);
+            this.buttongiangvien.TabIndex = 1;
+            this.buttongiangvien.Text = "Quản lý giảng viên";
+            this.buttongiangvien.UseVisualStyleBackColor = true;
+            this.buttongiangvien.Click += new System.EventHandler(this.buttongiangvien_Click);
+            // 
+            // buttonlophoc
+            // 
+            this.buttonlophoc.Location = new System.Drawing.Point(141, 232);
+            this.buttonlophoc.Name = "buttonlophoc";
+            this.buttonlophoc.Size = new System.Drawing.Size(220, 58);
+            this.buttonlophoc.TabIndex = 1;
+            this.buttonlophoc.Text = "Quản lý lớp học";
+            this.buttonlophoc.UseVisualStyleBackColor = true;
+            this.buttonlophoc.Click += new System.EventHandler(this.buttonlophoc_Click);
+            // 
+            // buttontaikhoan
+            // 
+            this.buttontaikhoan.Location = new System.Drawing.Point(141, 312);
+            this.buttontaikhoan.Name = "buttontaikhoan";
+            this.buttontaikhoan.Size = new System.Drawing.Size(220, 58);
+            this.buttontaikhoan.TabIndex = 1;
+            this.buttontaikhoan.Text = "Tài Khoản";
+            this.buttontaikhoan.UseVisualStyleBackColor = true;
+            this.buttontaikhoan.Click += new System.EventHandler(this.buttontaikhoan_Click);
+            // 
+            // buttonmonhoc
+            // 
+            this.buttonmonhoc.Location = new System.Drawing.Point(447, 149);
+            this.buttonmonhoc.Name = "buttonmonhoc";
+            this.buttonmonhoc.Size = new System.Drawing.Size(220, 58);
+            this.buttonmonhoc.TabIndex = 1;
+            this.buttonmonhoc.Text = "Quản lý môn học";
+            this.buttonmonhoc.UseVisualStyleBackColor = true;
+            this.buttonmonhoc.Click += new System.EventHandler(this.buttonmonhoc_Click);
+            // 
+            // buttonsinhvien
+            // 
+            this.buttonsinhvien.Location = new System.Drawing.Point(447, 232);
+            this.buttonsinhvien.Name = "buttonsinhvien";
+            this.buttonsinhvien.Size = new System.Drawing.Size(220, 58);
+            this.buttonsinhvien.TabIndex = 1;
+            this.buttonsinhvien.Text = "Quản lý sinh viên";
+            this.buttonsinhvien.UseVisualStyleBackColor = true;
+            this.buttonsinhvien.Click += new System.EventHandler(this.buttonsinhvien_Click);
+            // 
+            // buttondanhsachtaikhoan
+            // 
+            this.buttondanhsachtaikhoan.Location = new System.Drawing.Point(447, 312);
+            this.buttondanhsachtaikhoan.Name = "buttondanhsachtaikhoan";
+            this.buttondanhsachtaikhoan.Size = new System.Drawing.Size(220, 58);
+            this.buttondanhsachtaikhoan.TabIndex = 1;
+            this.buttondanhsachtaikhoan.Text = "Danh sách tài khoản";
+            this.buttondanhsachtaikhoan.UseVisualStyleBackColor = true;
+            this.buttondanhsachtaikhoan.Click += new System.EventHandler(this.buttondanhsachtaikhoan_Click);
             // 
             // FormMain
             // 
@@ -60,6 +128,7 @@ namespace StudentManagement
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.Name = "FormMain";
             this.Text = "Hệ thống quản lý sinh viên";
             this.ResumeLayout(false);
@@ -71,5 +140,11 @@ namespace StudentManagement
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttongiangvien;
+        private System.Windows.Forms.Button buttonlophoc;
+        private System.Windows.Forms.Button buttontaikhoan;
+        private System.Windows.Forms.Button buttonmonhoc;
+        private System.Windows.Forms.Button buttonsinhvien;
+        private System.Windows.Forms.Button buttondanhsachtaikhoan;
     }
 }
