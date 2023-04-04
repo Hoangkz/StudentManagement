@@ -112,9 +112,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(669, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 31);
+            this.label2.Size = new System.Drawing.Size(37, 31);
             this.label2.TabIndex = 8;
-            this.label2.Text = "id";
+            this.label2.Text = "Id";
             // 
             // textBox1
             // 
@@ -130,9 +130,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(661, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 31);
+            this.label3.Size = new System.Drawing.Size(61, 31);
             this.label3.TabIndex = 10;
-            this.label3.Text = "ten";
+            this.label3.Text = "Ten";
             // 
             // textBox2
             // 
@@ -174,6 +174,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(993, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // hệThốngToolStripMenuItem
             // 
