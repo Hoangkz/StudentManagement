@@ -170,8 +170,6 @@ namespace StudentManagement
                         arrId[i] = int.Parse(row.Cells[0].Value.ToString());
                         i++;
                     }
-                    Console.WriteLine("vào dây");
-
                     var deleteClass = db.ClassRoom.Where(u => arrId.Contains(u.IdClass));
                     if (deleteClass != null)
                     {
