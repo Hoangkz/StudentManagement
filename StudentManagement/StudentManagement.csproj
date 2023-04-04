@@ -110,9 +110,17 @@
     </Compile>
     <Compile Include="FormListSubject.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="FormListSubject.Designer.cs">
       <DependentUpon>FormListSubject.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FormListTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListTeacher.Designer.cs">
+      <DependentUpon>FormListTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListUsers.cs">
       <SubType>Form</SubType>
@@ -202,6 +210,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormListSubject.resx">
       <DependentUpon>FormListSubject.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListTeacher.resx">
+      <DependentUpon>FormListTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListUsers.resx">
       <DependentUpon>FormListUsers.cs</DependentUpon>
