@@ -170,15 +170,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="selectAllMonHoc_Result.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>ModelStudentManage.tt</DependentUpon>
-    </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>

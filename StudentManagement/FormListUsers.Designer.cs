@@ -108,6 +108,7 @@ namespace StudentManagement
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvAccount);
+
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1180, 641);
@@ -326,7 +327,9 @@ namespace StudentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1209, 668);
+
             this.Controls.Add(this.panel1);
             this.Name = "FormListUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -370,6 +373,7 @@ namespace StudentManagement
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
+
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
     }
