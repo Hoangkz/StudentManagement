@@ -97,6 +97,8 @@ namespace StudentManagement
                         i++;
                     }
                     var deleteTeacher = db.Teacher.Where(u => arrId.Contains(u.IdTeacher));
+                    Console.WriteLine("vào đây:" );
+                    Console.WriteLine(deleteTeacher != null);
                     if (deleteTeacher != null)
                     {
                         string message = "Bạn có chắc chắn muốn xóa danh sách tài khoản hay không?";
