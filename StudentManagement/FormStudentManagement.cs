@@ -96,8 +96,9 @@ namespace StudentManagement
 
         private void giaoVienToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            /*
             FormListTeacher formlistTeacher = new FormListTeacher();
-            AddForm(formlistTeacher);
+            AddForm(formlistTeacher);*/
         }
     }
 }
