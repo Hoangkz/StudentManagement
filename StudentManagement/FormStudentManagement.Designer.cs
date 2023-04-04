@@ -86,21 +86,21 @@ namespace StudentManagement
             // trangChủToolStripMenuItem
             // 
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
             this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem1
             // 
             this.tàiKhoảnToolStripMenuItem1.Name = "tàiKhoảnToolStripMenuItem1";
-            this.tàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
+            this.tàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.tàiKhoảnToolStripMenuItem1.Text = "Tài khoản";
             this.tàiKhoảnToolStripMenuItem1.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem1_Click);
             // 
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.thoatToolStripMenuItem.Text = "Đăng xuất";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
@@ -135,6 +135,7 @@ namespace StudentManagement
             this.giaoVienToolStripMenuItem1.Name = "giaoVienToolStripMenuItem1";
             this.giaoVienToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
             this.giaoVienToolStripMenuItem1.Text = "Giáo viên";
+            this.giaoVienToolStripMenuItem1.Click += new System.EventHandler(this.giaoVienToolStripMenuItem1_Click);
             // 
             // lopHocToolStripMenuItem
             // 
@@ -176,11 +177,12 @@ namespace StudentManagement
             // 
             // FormStudentManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormStudentManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý sinh viên";
