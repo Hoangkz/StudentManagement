@@ -44,6 +44,7 @@
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGV = new System.Windows.Forms.DataGridView();
+
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvGV);
@@ -60,6 +62,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1277, 658);
+
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -77,6 +80,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 486);
+
             this.panel2.TabIndex = 16;
             // 
             // button5
@@ -113,8 +117,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(197, 55);
             this.button3.TabIndex = 21;
-            this.button3.Text = "Close";
+            this.button3.Text = "export user";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -282,5 +287,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvGV;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label3;
     }
 }

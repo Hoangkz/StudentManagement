@@ -270,6 +270,11 @@ namespace StudentManagement
             idClass = 0;
             LoadListClass();
         }
+
+        private void dbLopHocShow_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }
