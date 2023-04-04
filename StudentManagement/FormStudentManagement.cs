@@ -17,7 +17,7 @@ namespace StudentManagement
         {
             idUser = id;
             InitializeComponent();
-            FormMain formMain = new FormMain();
+            FormMain formMain = new FormMain(2030);
             AddForm(formMain);
         }
 
@@ -68,7 +68,7 @@ namespace StudentManagement
 
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMain formMain = new FormMain();
+            FormMain formMain = new FormMain(2030);
             AddForm(formMain);
         }
 

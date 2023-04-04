@@ -46,7 +46,9 @@ namespace StudentManagement
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+
             this.label3 = new System.Windows.Forms.Label();
+
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -261,6 +263,7 @@ namespace StudentManagement
             this.panel1.Size = new System.Drawing.Size(1277, 574);
             this.panel1.TabIndex = 13;
             // 
+
             // label3
             // 
             this.label3.AutoSize = true;
@@ -271,10 +274,12 @@ namespace StudentManagement
             this.label3.TabIndex = 24;
             this.label3.Text = "DANH SÁCH SINH VIÊN";
             // 
+
             // FormListStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1303, 594);
             this.Controls.Add(this.panel1);
             this.Name = "FormListStudent";
@@ -307,6 +312,7 @@ namespace StudentManagement
         private System.Windows.Forms.DataGridView dgvAccount;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
