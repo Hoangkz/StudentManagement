@@ -77,5 +77,17 @@ namespace StudentManagement
             FormListStudent formListStudent = new FormListStudent();
             AddForm(formListStudent);
         }
+
+        private void lopHocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListClass formListClass = new FormListClass();
+            AddForm(formListClass);
+        }
+
+        private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegesterSubject formRegesterSubject = new FormRegesterSubject();
+            AddForm(formRegesterSubject);
+        }
     }
 }
