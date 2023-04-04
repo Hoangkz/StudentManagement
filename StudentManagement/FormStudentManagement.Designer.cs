@@ -128,6 +128,7 @@ namespace StudentManagement
             this.monHocToolStripMenuItem.Name = "monHocToolStripMenuItem";
             this.monHocToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.monHocToolStripMenuItem.Text = "Môn học";
+            this.monHocToolStripMenuItem.Click += new System.EventHandler(this.monHocToolStripMenuItem_Click);
             // 
             // giaoVienToolStripMenuItem1
             // 
@@ -155,14 +156,14 @@ namespace StudentManagement
             // dangKyToolStripMenuItem
             // 
             this.dangKyToolStripMenuItem.Name = "dangKyToolStripMenuItem";
-            this.dangKyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dangKyToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.dangKyToolStripMenuItem.Text = "Đăng ký môn học";
             this.dangKyToolStripMenuItem.Click += new System.EventHandler(this.dangKyToolStripMenuItem_Click);
             // 
             // traCuuDiemToolStripMenuItem
             // 
             this.traCuuDiemToolStripMenuItem.Name = "traCuuDiemToolStripMenuItem";
-            this.traCuuDiemToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.traCuuDiemToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.traCuuDiemToolStripMenuItem.Text = "Tra cứu điểm";
             // 
             // danhSáchTàiKhoảnToolStripMenuItem

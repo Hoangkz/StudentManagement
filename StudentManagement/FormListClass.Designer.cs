@@ -45,19 +45,19 @@ namespace StudentManagement
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dbLopHocShow)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // dbLopHocShow
@@ -71,6 +71,7 @@ namespace StudentManagement
             this.dbLopHocShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dbLopHocShow.Size = new System.Drawing.Size(607, 342);
             this.dbLopHocShow.TabIndex = 18;
+            this.dbLopHocShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbLopHocShow_CellContentClick);
             this.dbLopHocShow.SelectionChanged += new System.EventHandler(this.dbLopHocShow_SelectionChanged);
             // 
             // btnDel
@@ -238,36 +239,6 @@ namespace StudentManagement
             this.panel2.Size = new System.Drawing.Size(432, 466);
             this.panel2.TabIndex = 20;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.txtIdClass);
-            this.panel5.Location = new System.Drawing.Point(3, 122);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(204, 60);
-            this.panel5.TabIndex = 18;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txtClassname);
-            this.panel3.Location = new System.Drawing.Point(213, 182);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(204, 60);
-            this.panel3.TabIndex = 16;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(0, 184);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(204, 60);
-            this.panel4.TabIndex = 17;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label2);
@@ -298,6 +269,36 @@ namespace StudentManagement
             this.textBox1.Size = new System.Drawing.Size(183, 27);
             this.textBox1.TabIndex = 11;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.txtIdClass);
+            this.panel5.Location = new System.Drawing.Point(3, 122);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(204, 60);
+            this.panel5.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.txtClassname);
+            this.panel3.Location = new System.Drawing.Point(213, 182);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(204, 60);
+            this.panel3.TabIndex = 16;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(0, 184);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(204, 60);
+            this.panel4.TabIndex = 17;
+            // 
             // FormListClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -314,14 +315,14 @@ namespace StudentManagement
             ((System.ComponentModel.ISupportInitialize)(this.dbLopHocShow)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
