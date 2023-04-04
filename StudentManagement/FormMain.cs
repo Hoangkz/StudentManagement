@@ -90,7 +90,7 @@ namespace StudentManagement
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            textBoxlop.Text = "Chào mừng ... đến với hệ thống";
+            textBoxlop.Text = "ĐH10C3";
             var User = db.Account.Find(idUser);
             try
             {
