@@ -140,5 +140,14 @@ namespace StudentManagement
             textBox1.Text = "";
             LoadDataTeacher();
         }
+        private void ExportToExcel( DataGridView dataGridView, string text="excel")
+        {
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string text = label3.Text;
+            ExportToExcel(dgvGV, text);
+        }
     }
 }
