@@ -114,6 +114,12 @@
     <Compile Include="FormListSubject.Designer.cs">
       <DependentUpon>FormListSubject.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListTeacher.Designer.cs">
+      <DependentUpon>FormListTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormListSubject.resx">
       <DependentUpon>FormListSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListTeacher.resx">
+      <DependentUpon>FormListTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListUsers.resx">
       <DependentUpon>FormListUsers.cs</DependentUpon>
