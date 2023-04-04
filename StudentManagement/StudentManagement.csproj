@@ -39,11 +39,25 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,6 +96,12 @@
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListClass.Designer.cs">
+      <DependentUpon>FormListClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +131,12 @@
     </Compile>
     <Compile Include="FormRegester.Designer.cs">
       <DependentUpon>FormRegester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegesterSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegesterSubject.Designer.cs">
+      <DependentUpon>FormRegesterSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="FormStudentManagement.cs">
       <SubType>Form</SubType>
@@ -177,6 +203,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListClass.resx">
+      <DependentUpon>FormListClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListStudent.resx">
       <DependentUpon>FormListStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,7 +239,6 @@
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include=".env" />
     <None Include="App.Config" />
     <EntityDeploy Include="ModelStudentManage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
