@@ -128,6 +128,7 @@ namespace StudentManagement
             this.monHocToolStripMenuItem.Name = "monHocToolStripMenuItem";
             this.monHocToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.monHocToolStripMenuItem.Text = "Môn học";
+            this.monHocToolStripMenuItem.Click += new System.EventHandler(this.monHocToolStripMenuItem_Click);
             // 
             // giaoVienToolStripMenuItem1
             // 

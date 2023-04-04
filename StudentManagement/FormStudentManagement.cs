@@ -86,8 +86,12 @@ namespace StudentManagement
 
         private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormRegesterSubject formRegesterSubject = new FormRegesterSubject();
-            AddForm(formRegesterSubject);
+        }
+
+        private void monHocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListSubject formListSubject = new FormListSubject();
+            AddForm(formListSubject);
         }
     }
 }
