@@ -108,6 +108,12 @@
     <Compile Include="FormListStudent.Designer.cs">
       <DependentUpon>FormListStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListTeacher.Designer.cs">
+      <DependentUpon>FormListTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,12 +131,6 @@
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formquanlygiangvien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formquanlygiangvien.Designer.cs">
-      <DependentUpon>formquanlygiangvien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegester.cs">
       <SubType>Form</SubType>
@@ -206,6 +206,9 @@
     <EmbeddedResource Include="FormListStudent.resx">
       <DependentUpon>FormListStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListTeacher.resx">
+      <DependentUpon>FormListTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListUsers.resx">
       <DependentUpon>FormListUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,9 +217,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formquanlygiangvien.resx">
-      <DependentUpon>formquanlygiangvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegester.resx">
       <DependentUpon>FormRegester.cs</DependentUpon>

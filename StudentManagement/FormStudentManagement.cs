@@ -89,5 +89,11 @@ namespace StudentManagement
             FormRegesterSubject formRegesterSubject = new FormRegesterSubject();
             AddForm(formRegesterSubject);
         }
+
+        private void giaoVienToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormListTeacher formlistTeacher = new FormListTeacher();
+            AddForm(formlistTeacher);
+        }
     }
 }
