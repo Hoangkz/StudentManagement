@@ -78,7 +78,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,7 +92,7 @@
             // 
             // btnThemMoi
             // 
-            this.btnThemMoi.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnThemMoi.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThemMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,7 +106,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSua.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,7 +120,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnXoa.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,7 +134,7 @@
             // 
             // btnEE
             // 
-            this.btnEE.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEE.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEE.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,7 +171,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(240, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 38);
+            this.label3.Size = new System.Drawing.Size(309, 37);
             this.label3.TabIndex = 0;
             this.label3.Text = "Danh Sách Môn Học";
             // 
