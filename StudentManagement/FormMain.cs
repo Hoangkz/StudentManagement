@@ -90,15 +90,20 @@ namespace StudentManagement
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            textBoxlop.Text = "ĐH10C3";
+            //textBoxlop.Text = "ĐH10C3";
             var User = db.Account.Find(idUser);
             try
             {
-               
+                /*
                 textBox2.Text = User.FullName;
                 comboBox1.SelectedItem = User.Gender;
                 textBox3.Text = User.Phone;
-                textBox4.Text = User.Email;
+                textBox4.Text = User.Email;*/
+
+                label11.Text = User.FullName;
+                label12.Text = User.Gender;
+                label13.Text = User.Phone;
+                label14.Text = User.Email;
                 DateTime dateTime = DateTime.ParseExact(User.DateOfBirth, "dd/MM/yyyy", null);
                 dateTimePicker1.Value = dateTime;
             }
