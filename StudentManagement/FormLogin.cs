@@ -29,34 +29,11 @@ namespace StudentManagement
                 {
                     if (query.isUser)
                     {
-                        string Role = query.Role.Replace(" ", "").ToLower();
-                        if (Role == "admin")
-                        {
                             textBox2.Text = "";
                             this.Hide();
                             FormStudentManagement st = new FormStudentManagement(query.Id);
                             st.ShowDialog();
                             this.Show();
-                        }
-                        else if(Role == "nhânviên")
-                        {
-                            string text = "Nhân viên " + query.UserName;
-                            MessageBox.Show(text, "Thông báo");
-                        }
-                        else if (Role == "giảngviên")
-                        {
-                            string text = "Giảng viên: " + query.UserName;
-                            MessageBox.Show(text, "Thông báo");
-                        }
-                        else if (Role == "sinhviên")
-                        {
-                            string text = "Sinh viên " + query.UserName;
-                            MessageBox.Show(text, "Thông báo");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tài khoản của bạn chưa được cấp quyền truy cập", "Thông báo");
-                        }
                     }
                     else
                     {

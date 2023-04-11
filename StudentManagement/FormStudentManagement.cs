@@ -13,6 +13,7 @@ namespace StudentManagement
     public partial class FormStudentManagement : Form
     {
         private int idUser;
+        StudentManagementEntities db = new StudentManagementEntities();
         public FormStudentManagement(int id)
         {
             idUser = id;
@@ -23,7 +24,36 @@ namespace StudentManagement
 
         private void FormStudentManagement_Load(object sender, EventArgs e)
         {
+            var User = db.Account.Find(idUser);
+            string role = User.Role.Replace(" ", "").ToLower();
+            if (role =="admin")
+            {
+                Console.WriteLine("admin");
 
+                //nếu là admin
+                //ẩn 2 menu chấm điểm và đăng ký môn học
+                //chỉ để lại menu quản lý
+                //chamDiemToolStripMenuItem.Visible = false;
+                //chucNangToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                //nếu không phải admin thì ẩn menu quản lý
+                //quanLyToolStripMenuItem.Visible = false;
+                if (role=="giảngviên")//nếu là giáo viên
+                {
+                    Console.WriteLine("Giảng Viên");
+
+                    //ẩn menu đăng ký học -> cái này chỉ dành riêng cho sinh viên
+                    //chucNangToolStripMenuItem.Visible = false;
+                }
+                else if(role== "sinhviên")//chỉ còn lại trường hợp là sinh viên
+                {
+                    Console.WriteLine("Sinh viên");
+
+                    //chamDiemToolStripMenuItem.Visible = false;//ẩn menu chấm điểm<-chức năng của gv
+                }
+            }
         }
 
         private void tabPage7_Click(object sender, EventArgs e)
