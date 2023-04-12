@@ -104,6 +104,8 @@ namespace StudentManagement
         {
             FormDetailStudent formDetailStudent = new FormDetailStudent(dgvAccount.SelectedRows[0]);
             formDetailStudent.ShowDialog();
+            LoadDataAccount();
+
         }
 
         private void button3_Click(object sender, EventArgs e)

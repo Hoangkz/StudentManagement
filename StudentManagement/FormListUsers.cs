@@ -167,6 +167,7 @@ namespace StudentManagement
                 int Id = int.Parse(dgvAccount.SelectedRows[0].Cells[0].Value.ToString());
                 FormUpdateUser formUpdateUser = new FormUpdateUser(Id);
                 formUpdateUser.ShowDialog();
+                LoadDataAccount();
             }
             catch { }
         }
