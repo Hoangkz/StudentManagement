@@ -340,6 +340,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
@@ -407,13 +413,16 @@
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include=".env" />
-    <Content Include="connectionstring.txt" />
+    <None Include="Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="App.Config" />
     <EntityDeploy Include="ModelStudentManage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelStudentManage.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include=".env" />
     <None Include="ModelStudentManage.edmx.diagram">
       <DependentUpon>ModelStudentManage.edmx</DependentUpon>
     </None>
