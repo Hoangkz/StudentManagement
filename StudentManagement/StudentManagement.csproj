@@ -352,6 +352,9 @@
     <Compile Include="Subject.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ModelStudentManage.tt</DependentUpon>
+    </Compile>
     <Compile Include="Teacher.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
@@ -413,19 +416,18 @@
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="ModelStudentManage.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelStudentManage.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelStudentManage.edmx.diagram">
+      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
+    </None>
     <None Include="Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="App.Config" />
-    <EntityDeploy Include="ModelStudentManage.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelStudentManage.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include=".env" />
-    <None Include="ModelStudentManage.edmx.diagram">
-      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -441,18 +443,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelStudentManage.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
-      <LastGenOutput>ModelStudentManage.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelStudentManage.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
-      <LastGenOutput>ModelStudentManage.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -463,6 +453,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelStudentManage.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
+      <LastGenOutput>ModelStudentManage.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelStudentManage.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelStudentManage.edmx</DependentUpon>
+      <LastGenOutput>ModelStudentManage.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

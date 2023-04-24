@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="16f24eafc66c401c81dcf6c7b7660385" Name="Diagram1">
+        <EntityTypeShape EntityType="StudentManagementModel.Account" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.ClassRoom" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.Faculty" Width="1.5" PointX="3.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.Mark" Width="1.5" PointX="10.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.Student" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.Subject" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.Teacher" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementModel.sinhvien" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="StudentManagementModel.FK_Account_Teacher_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK_OrderDetails_Orders_IdUser" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK__Student__IdClass__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK__Teacher__IdClass__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK__Teacher__IdFacul__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK__Mark__IdStudent__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK__Mark__IdSubject__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK__Mark__IdTeacher__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementModel.FK__Subject__IdTeach__47DBAE45" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
