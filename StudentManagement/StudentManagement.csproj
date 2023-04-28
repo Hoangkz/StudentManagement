@@ -240,6 +240,12 @@
     <Compile Include="Faculty.cs">
       <DependentUpon>ModelStudentManage.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormCheckScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckScores.Designer.cs">
+      <DependentUpon>FormCheckScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDetailStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,24 @@
     </Compile>
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExam.Designer.cs">
+      <DependentUpon>FormExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputExam.Designer.cs">
+      <DependentUpon>FormInputExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputScores.Designer.cs">
+      <DependentUpon>FormInputScores.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListClass.cs">
       <SubType>Form</SubType>
@@ -302,17 +326,47 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMyClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMyClass.Designer.cs">
+      <DependentUpon>FormMyClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegester.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegester.Designer.cs">
       <DependentUpon>FormRegester.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegesterSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegesterSubject.Designer.cs">
+      <DependentUpon>FormRegesterSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegesterSubjectClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegesterSubjectClass.Designer.cs">
+      <DependentUpon>FormRegesterSubjectClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScores.Designer.cs">
+      <DependentUpon>FormScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStudentManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormStudentManagement.Designer.cs">
       <DependentUpon>FormStudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateClass.Designer.cs">
+      <DependentUpon>FormUpdateClass.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUpdateUser.cs">
       <SubType>Form</SubType>
@@ -364,6 +418,9 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormCheckScores.resx">
+      <DependentUpon>FormCheckScores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDetailStudent.resx">
       <DependentUpon>FormDetailStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,6 +429,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExam.resx">
+      <DependentUpon>FormExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputExam.resx">
+      <DependentUpon>FormInputExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputScores.resx">
+      <DependentUpon>FormInputScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListClass.resx">
       <DependentUpon>FormListClass.cs</DependentUpon>
@@ -395,11 +461,26 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMyClass.resx">
+      <DependentUpon>FormMyClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegester.resx">
       <DependentUpon>FormRegester.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegesterSubject.resx">
+      <DependentUpon>FormRegesterSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegesterSubjectClass.resx">
+      <DependentUpon>FormRegesterSubjectClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScores.resx">
+      <DependentUpon>FormScores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStudentManagement.resx">
       <DependentUpon>FormStudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateClass.resx">
+      <DependentUpon>FormUpdateClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateUser.resx">
       <DependentUpon>FormUpdateUser.cs</DependentUpon>

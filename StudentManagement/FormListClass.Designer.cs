@@ -43,18 +43,12 @@ namespace StudentManagement
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dbLopHocShow)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -65,11 +59,12 @@ namespace StudentManagement
             this.dbLopHocShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbLopHocShow.Location = new System.Drawing.Point(12, 175);
             this.dbLopHocShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dbLopHocShow.MultiSelect = false;
             this.dbLopHocShow.Name = "dbLopHocShow";
             this.dbLopHocShow.RowHeadersWidth = 51;
             this.dbLopHocShow.RowTemplate.Height = 24;
             this.dbLopHocShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dbLopHocShow.Size = new System.Drawing.Size(607, 342);
+            this.dbLopHocShow.Size = new System.Drawing.Size(607, 400);
             this.dbLopHocShow.TabIndex = 18;
             this.dbLopHocShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbLopHocShow_CellContentClick);
             this.dbLopHocShow.SelectionChanged += new System.EventHandler(this.dbLopHocShow_SelectionChanged);
@@ -77,10 +72,10 @@ namespace StudentManagement
             // btnDel
             // 
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(7, 376);
+            this.btnDel.Location = new System.Drawing.Point(10, 443);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(163, 40);
+            this.btnDel.Size = new System.Drawing.Size(188, 40);
             this.btnDel.TabIndex = 4;
             this.btnDel.Text = "Xoá";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -89,10 +84,10 @@ namespace StudentManagement
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(7, 335);
+            this.btnUpdate.Location = new System.Drawing.Point(10, 402);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(163, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(188, 40);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -101,10 +96,10 @@ namespace StudentManagement
             // btnFind
             // 
             this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.Location = new System.Drawing.Point(7, 294);
+            this.btnFind.Location = new System.Drawing.Point(10, 361);
             this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(163, 40);
+            this.btnFind.Size = new System.Drawing.Size(188, 40);
             this.btnFind.TabIndex = 1;
             this.btnFind.Text = "Tìm kiếm";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -113,10 +108,10 @@ namespace StudentManagement
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(7, 417);
+            this.btnAdd.Location = new System.Drawing.Point(10, 484);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(163, 40);
+            this.btnAdd.Size = new System.Drawing.Size(188, 40);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm lớp";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -144,7 +139,7 @@ namespace StudentManagement
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(24, 4);
+            this.button1.Location = new System.Drawing.Point(93, 314);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 31);
@@ -207,25 +202,15 @@ namespace StudentManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(414, 13);
+            this.label4.Location = new System.Drawing.Point(330, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(214, 36);
             this.label4.TabIndex = 21;
             this.label4.Text = "Danh sách lớp ";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(274, 246);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(129, 37);
-            this.panel1.TabIndex = 18;
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnDel);
@@ -233,41 +218,11 @@ namespace StudentManagement
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Location = new System.Drawing.Point(625, 51);
+            this.panel2.Location = new System.Drawing.Point(617, 51);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(432, 466);
+            this.panel2.Size = new System.Drawing.Size(216, 524);
             this.panel2.TabIndex = 20;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Location = new System.Drawing.Point(213, 122);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(204, 60);
-            this.panel6.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "ID Teacher";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(7, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 27);
-            this.textBox1.TabIndex = 11;
             // 
             // panel5
             // 
@@ -283,7 +238,7 @@ namespace StudentManagement
             // 
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtClassname);
-            this.panel3.Location = new System.Drawing.Point(213, 182);
+            this.panel3.Location = new System.Drawing.Point(3, 186);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 60);
@@ -293,7 +248,7 @@ namespace StudentManagement
             // 
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(0, 184);
+            this.panel4.Location = new System.Drawing.Point(3, 250);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(204, 60);
@@ -303,7 +258,7 @@ namespace StudentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 559);
+            this.ClientSize = new System.Drawing.Size(855, 598);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dbLopHocShow);
             this.Controls.Add(this.label3);
@@ -313,10 +268,7 @@ namespace StudentManagement
             this.Text = "Danh sách lớp ";
             this.Load += new System.EventHandler(this.FormListClass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbLopHocShow)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -344,13 +296,9 @@ namespace StudentManagement
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

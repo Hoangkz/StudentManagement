@@ -75,16 +75,16 @@
             this.panel2.Location = new System.Drawing.Point(1037, 167);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 486);
+            this.panel2.Size = new System.Drawing.Size(233, 424);
             this.panel2.TabIndex = 16;
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(32, 149);
+            this.button5.Location = new System.Drawing.Point(106, 143);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 38);
+            this.button5.Size = new System.Drawing.Size(94, 38);
             this.button5.TabIndex = 23;
             this.button5.Text = "reset";
             this.button5.UseVisualStyleBackColor = true;
@@ -94,10 +94,10 @@
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(13, 431);
+            this.button4.Location = new System.Drawing.Point(7, 377);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 55);
+            this.button4.Size = new System.Drawing.Size(176, 44);
             this.button4.TabIndex = 22;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = true;
@@ -119,10 +119,10 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 302);
+            this.button1.Location = new System.Drawing.Point(4, 272);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 55);
+            this.button1.Size = new System.Drawing.Size(179, 41);
             this.button1.TabIndex = 20;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(13, 366);
+            this.button2.Location = new System.Drawing.Point(7, 323);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 44);
@@ -175,7 +175,7 @@
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtID);
-            this.panel3.Location = new System.Drawing.Point(3, 18);
+            this.panel3.Location = new System.Drawing.Point(3, 5);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(197, 55);
@@ -205,7 +205,7 @@
             // 
             this.btnTraCuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraCuu.Location = new System.Drawing.Point(11, 240);
+            this.btnTraCuu.Location = new System.Drawing.Point(4, 221);
             this.btnTraCuu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new System.Drawing.Size(179, 41);
@@ -239,7 +239,7 @@
             this.dgvGV.ReadOnly = true;
             this.dgvGV.RowHeadersWidth = 51;
             this.dgvGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGV.Size = new System.Drawing.Size(904, 453);
+            this.dgvGV.Size = new System.Drawing.Size(904, 419);
             this.dgvGV.TabIndex = 11;
             // 
             // FormListTeacher

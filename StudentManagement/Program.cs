@@ -30,7 +30,7 @@ namespace StudentManagement
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormStudentManagement(2030));
+            //Application.Run(new FormStudentManagement(3036));
             Application.Run(new FormLogin());
         }
     }

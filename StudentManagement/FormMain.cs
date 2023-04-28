@@ -32,7 +32,7 @@ namespace StudentManagement
         private void buttonsinhvien_Click(object sender, EventArgs e)
         {
             // Tạo đối tượng của form muốn chuyển đến
-            FormListStudent FormListStudent = new FormListStudent();
+            FormListStudent FormListStudent = new FormListStudent(2);
 
             // Hiển thị form
             FormListStudent.Show();

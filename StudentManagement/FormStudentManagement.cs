@@ -28,36 +28,38 @@ namespace StudentManagement
             string role = User.Role.Replace(" ", "").ToLower();
             if (role =="admin")
             {
-                Console.WriteLine("admin");
-
-                //nếu là admin
-                //ẩn 2 menu chấm điểm và đăng ký môn học
-                //chỉ để lại menu quản lý
-                //chamDiemToolStripMenuItem.Visible = false;
-                //chucNangToolStripMenuItem.Visible = false;
+                dangKyToolStripMenuItem.Visible = false;
+                DiemThanhPhanToolStripMenuItem.Visible=false;
+                DiemThiToolStripMenuItem.Visible=false;
+                traCuuDiemToolStripMenuItem.Visible = false;
+                myClassToolStripMenuItem.Visible = false;
             }
             else
             {
-                //nếu không phải admin thì ẩn menu quản lý
-                //quanLyToolStripMenuItem.Visible = false;
                 if (role=="giảngviên")//nếu là giáo viên
                 {
-                    Console.WriteLine("Giảng Viên");
-
-                    //ẩn menu đăng ký học -> cái này chỉ dành riêng cho sinh viên
-                    //chucNangToolStripMenuItem.Visible = false;
+                    dangKyToolStripMenuItem.Visible = false;
+                    dangkymonhocClassHọcToolStripMenuItem.Visible=false;
+                    danhSachTaiKhoanToolStripMenuItem.Visible = false;
+                    giaoVienToolStripMenuItem1.Visible = false;
+                    traCuuDiemToolStripMenuItem.Visible = false;
+                    var teacher = db.Teacher.FirstOrDefault(c=>c.idUser==idUser);
+                    if(teacher.IdClass==null)
+                    {
+                        myClassToolStripMenuItem.Visible = false;
+                    }
+                    
                 }
                 else if(role== "sinhviên")//chỉ còn lại trường hợp là sinh viên
                 {
-                    Console.WriteLine("Sinh viên");
-
-                    //chamDiemToolStripMenuItem.Visible = false;//ẩn menu chấm điểm<-chức năng của gv
+                    dangkymonhocClassHọcToolStripMenuItem.Visible = false;
+                    danhSachTaiKhoanToolStripMenuItem.Visible = false;
+                    quanLyToolStripMenuItem.Visible = false;
+                    DiemThanhPhanToolStripMenuItem.Visible = false;
+                    DiemThiToolStripMenuItem.Visible = false;
+                    myClassToolStripMenuItem.Visible = false;
                 }
             }
-        }
-
-        private void tabPage7_Click(object sender, EventArgs e)
-        {
         }
 
         private void danhSáchTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,7 +106,14 @@ namespace StudentManagement
 
         private void sinhVienToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormListStudent formListStudent = new FormListStudent();
+            var User = db.Account.Find(idUser);
+            string role = User.Role.Replace(" ", "").ToLower();
+            int checkRole = 0;
+            if(role == "giảngviên")
+            {
+                checkRole = User.Id;
+            }
+            FormListStudent formListStudent = new FormListStudent(checkRole);
             AddForm(formListStudent);
         }
 
@@ -116,6 +125,8 @@ namespace StudentManagement
 
         private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormRegesterSubject formRegesterSubject = new FormRegesterSubject(idUser);
+            AddForm(formRegesterSubject);
         }
 
         private void monHocToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,6 +139,53 @@ namespace StudentManagement
         {
             FormListTeacher formlistTeacher = new FormListTeacher();
             AddForm(formlistTeacher);
+        }
+
+        private void đăngKýMônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegesterSubjectClass formRegesterSubjectClass = new FormRegesterSubjectClass(idUser);
+            AddForm(formRegesterSubjectClass);
+        }
+
+        private void DiemThanhPhanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormScores formScores = new FormScores(idUser);
+            AddForm(formScores);
+        }
+
+        private void DiemThiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormExam formExam = new FormExam(idUser);
+            AddForm(formExam);  
+        }
+
+        private void traCuuDiemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var User = db.Account.Find(idUser);
+            string role = User.Role.Replace(" ", "").ToLower();
+            int checkRole = 0;
+            if (role == "sinhviên")
+            {
+                checkRole = User.Id;
+            }
+            FormCheckScores formCheckScores = new FormCheckScores(checkRole);
+            AddForm(formCheckScores);
+        }
+
+        private void lớpHọcCủaTôiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var User = db.Teacher.FirstOrDefault(c=>c.idUser==idUser);
+            string role = User.Account.Role.Replace(" ", "").ToLower();
+            int idGiangVien = 0;
+            if (role == "giảngviên")
+            {
+                if (User.IdClass != null)
+                {
+                    idGiangVien = User.IdTeacher;
+                    FormMyClass formMyClass = new FormMyClass(idGiangVien);
+                    AddForm(formMyClass);
+                }
+            }
         }
     }
 }

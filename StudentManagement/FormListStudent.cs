@@ -14,9 +14,10 @@ namespace StudentManagement
     public partial class FormListStudent : Form
     {
         StudentManagementEntities db = new StudentManagementEntities();
-
-        public FormListStudent()
-        {
+        int role;
+        public FormListStudent(int role)
+        { 
+            this.role = role;
             InitializeComponent();
             LoadDataAccount();
         }
@@ -24,22 +25,46 @@ namespace StudentManagement
 
         private void LoadDataAccount()
         {
-            var listAccount = from c in db.Account
-                              join u in db.Student 
-                              on c.Id equals u.idUser
+            var loadStudent = db.Mark.Where(c => c.Teacher.Account.Id == role).Select(c => new {
+                c.Student.Account.Id,
+                c.Student.Account.FullName,
+                c.Student.Account.Gender,
+                c.Student.Account.DateOfBirth,
+                c.Student.Account.Phone,
+                c.Student.Account.Email,
+                c.Student.ClassRoom.ClassName
+            }).Distinct().ToList();
 
-                              
-                              join classRoomJoin in db.ClassRoom on u.IdClass equals classRoomJoin.IdClass 
-                              into classRoomGroup from classRoom in classRoomGroup.DefaultIfEmpty() where (c.Role.Replace(" ","").ToLower() =="sinhviên" && c.isUser==true)
-                              select new { c.Id, c.FullName, c.Gender, c.DateOfBirth, c.Phone, c.Email,
-                                  Class = classRoom != null ? classRoom.ClassName : "Chưa xếp lớp"
-                              };
-            dgvAccount.DataSource = listAccount.ToList();
+            var listAccount =from c in db.Account
+                join u in db.Student
+                on c.Id equals u.idUser
+                join classRoomJoin in db.ClassRoom on u.IdClass equals classRoomJoin.IdClass
+                into classRoomGroup
+                from classRoom in classRoomGroup.DefaultIfEmpty()
+                where (c.Role.Replace(" ", "").ToLower() == "sinhviên" && c.isUser == true)
+                select new
+                {
+                    c.Id,
+                    c.FullName,
+                    c.Gender,
+                    c.DateOfBirth,
+                    c.Phone,
+                    c.Email,
+                    ClassName = classRoom != null ? classRoom.ClassName : "Chưa xếp lớp"
+                };
+            if (role == 0)
+            {
+                dgvAccount.DataSource = listAccount.ToList();
+                
+            }
+            else
+            {
+                dgvAccount.DataSource = loadStudent.ToList();
+            }
             dgvAccount.Columns["FullName"].HeaderText = "Họ và tên";
             dgvAccount.Columns["Gender"].HeaderText = "Giới tính";
             dgvAccount.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
-            dgvAccount.Columns["Class"].HeaderText = "Lớp";
-
+            dgvAccount.Columns["ClassName"].HeaderText = "Lớp";
             db.SaveChanges();
 
         }
@@ -190,6 +215,7 @@ namespace StudentManagement
             workbook.Close(true, Type.Missing, Type.Missing);
             excel.Quit();
         }
+        
         private void button5_Click(object sender, EventArgs e)
         {
             string text = label3.Text;
