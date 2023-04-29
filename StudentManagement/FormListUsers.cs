@@ -104,7 +104,10 @@ namespace StudentManagement
 
         private void FormListUsers_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndex = 0;
+            if (comboBox1.Items.Count > 0)
+            {
+                comboBox1.SelectedIndex = 0;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

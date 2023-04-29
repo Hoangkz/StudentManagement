@@ -100,11 +100,11 @@ namespace StudentManagement
                 textBox3.Text = User.Phone;
                 textBox4.Text = User.Email;*/
 
-                label11.Text = User.FullName;
-                label12.Text = User.Gender;
-                label13.Text = User.Phone;
-                label14.Text = User.Email;
-                DateTime dateTime = DateTime.ParseExact(User.DateOfBirth, "dd/MM/yyyy", null);
+                label11.Text = User?.FullName;
+                label12.Text = User?.Gender.ToString();
+                label13.Text = User?.Phone.ToString();
+                label14.Text = User?.Email.ToString();
+                DateTime dateTime = DateTime.ParseExact(User?.DateOfBirth, "dd/MM/yyyy", null);
                 dateTimePicker1.Value = dateTime;
             }
             catch

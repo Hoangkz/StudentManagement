@@ -40,7 +40,10 @@ namespace StudentManagement
             if (loaitk == "giảngviên")
             {
                 comboBox3.Enabled = true;
-                comboBox3.SelectedIndex = 0;
+                if(comboBox3.Items.Count > 0)
+                {
+                    comboBox3.SelectedIndex = 0;
+                }
             }
             else
             {
@@ -72,8 +75,8 @@ namespace StudentManagement
             string fullname = textBox3.Text;
             string gender = comboBox2.SelectedItem.ToString();
             string dateOfbirth = dateTimePicker1.Value.ToShortDateString().ToString();
-            string tell = textBox2.Text;
-            string email = textBox2.Text;
+            string tell = textBox4.Text;
+            string email = textBox5.Text;
             if (username.Length >= 5 && password.Length >= 5 && role!="" && fullname.Length>0)
             { 
                 var query = db.Account.Where(a => a.UserName == username);
