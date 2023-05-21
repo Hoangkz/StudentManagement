@@ -30,7 +30,7 @@ namespace StudentManagement
                                 on c.IdTeacher equals u.IdTeacher
                               join acc in db.Account 
                               on u.idUser equals acc.Id
-                              select new { c.IdSubject, c.SubjectName, u.IdTeacher, acc.FullName};
+                              select new { c.IdSubject, c.SubjectName, u.IdTeacher, acc.FullName, u.Faculty.FacultyName};
             var query = from c in db.Teacher
                         join u in db.Account
                         on c.idUser equals u.Id
@@ -46,6 +46,7 @@ namespace StudentManagement
             dgvDSMH.Columns["IdTeacher"].HeaderText = "Mã giảng viên";
 
             dgvDSMH.Columns["FullName"].HeaderText = "Tên giảng viên";
+            dgvDSMH.Columns["FacultyName"].HeaderText = "Tên khoa";
 
             db.SaveChanges();
             

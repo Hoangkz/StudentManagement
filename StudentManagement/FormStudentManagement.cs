@@ -44,6 +44,7 @@ namespace StudentManagement
                     giaoVienToolStripMenuItem1.Visible = false;
                     traCuuDiemToolStripMenuItem.Visible = false;
                     var teacher = db.Teacher.FirstOrDefault(c=>c.idUser==idUser);
+                    Console.WriteLine(teacher.idUser);
                     if(teacher.IdClass==null)
                     {
                         myClassToolStripMenuItem.Visible = false;

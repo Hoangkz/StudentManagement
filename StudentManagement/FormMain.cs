@@ -22,6 +22,7 @@ namespace StudentManagement
         {
             InitializeComponent();
             idUser = id;
+
         }
 
         private void buttongiangvien_Click(object sender, EventArgs e)
@@ -90,6 +91,8 @@ namespace StudentManagement
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            panel2.BackColor = Color.FromArgb((int)(0.8 * 255), Color.White);
+
             //textBoxlop.Text = "ĐH10C3";
             var User = db.Account.Find(idUser);
             try
@@ -106,6 +109,23 @@ namespace StudentManagement
                 label14.Text = User?.Email.ToString();
                 DateTime dateTime = DateTime.ParseExact(User?.DateOfBirth, "dd/MM/yyyy", null);
                 dateTimePicker1.Value = dateTime;
+                if (User.Role =="Sinh viên")
+                {
+                    var sinhvien = db.Student.FirstOrDefault(c => c.idUser == User.Id);
+                    if(sinhvien.ClassRoom.ClassName != null) {
+                        label3.Text = sinhvien.ClassRoom.ClassName;
+                    }
+                    else
+                    {
+                        label9.Visible = false;
+                        label3.Visible = false;
+                    }
+                }
+                else
+                {
+                    label9.Visible = false;
+                    label3.Visible = false;
+                }
             }
             catch
             {

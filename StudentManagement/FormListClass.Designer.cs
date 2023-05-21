@@ -57,7 +57,7 @@ namespace StudentManagement
             // dbLopHocShow
             // 
             this.dbLopHocShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbLopHocShow.Location = new System.Drawing.Point(12, 175);
+            this.dbLopHocShow.Location = new System.Drawing.Point(4, 115);
             this.dbLopHocShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dbLopHocShow.MultiSelect = false;
             this.dbLopHocShow.Name = "dbLopHocShow";
@@ -72,7 +72,7 @@ namespace StudentManagement
             // btnDel
             // 
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(10, 443);
+            this.btnDel.Location = new System.Drawing.Point(10, 384);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(188, 40);
@@ -84,7 +84,7 @@ namespace StudentManagement
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(10, 402);
+            this.btnUpdate.Location = new System.Drawing.Point(10, 343);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(188, 40);
@@ -96,7 +96,7 @@ namespace StudentManagement
             // btnFind
             // 
             this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.Location = new System.Drawing.Point(10, 361);
+            this.btnFind.Location = new System.Drawing.Point(10, 302);
             this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(188, 40);
@@ -108,7 +108,7 @@ namespace StudentManagement
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(10, 484);
+            this.btnAdd.Location = new System.Drawing.Point(10, 425);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(188, 40);
@@ -139,7 +139,7 @@ namespace StudentManagement
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(93, 314);
+            this.button1.Location = new System.Drawing.Point(93, 255);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 31);
@@ -221,14 +221,14 @@ namespace StudentManagement
             this.panel2.Location = new System.Drawing.Point(617, 51);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(216, 524);
+            this.panel2.Size = new System.Drawing.Size(211, 473);
             this.panel2.TabIndex = 20;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.txtIdClass);
-            this.panel5.Location = new System.Drawing.Point(3, 122);
+            this.panel5.Location = new System.Drawing.Point(3, 63);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(204, 60);
@@ -238,7 +238,7 @@ namespace StudentManagement
             // 
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtClassname);
-            this.panel3.Location = new System.Drawing.Point(3, 186);
+            this.panel3.Location = new System.Drawing.Point(3, 127);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 60);
@@ -248,7 +248,7 @@ namespace StudentManagement
             // 
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(3, 250);
+            this.panel4.Location = new System.Drawing.Point(3, 191);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(204, 60);
@@ -258,7 +258,7 @@ namespace StudentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 598);
+            this.ClientSize = new System.Drawing.Size(867, 552);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dbLopHocShow);
             this.Controls.Add(this.label3);

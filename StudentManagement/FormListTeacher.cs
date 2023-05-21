@@ -27,9 +27,15 @@ namespace StudentManagement
                                   c.DateOfBirth,
                                   c.Phone,
                                   c.Email,
+                                  u.Faculty.FacultyName
 
                               };
             dgvGV.DataSource = listTeacher.ToList();
+            dgvGV.Columns["IdTeacher"].HeaderText = "ID"; 
+            dgvGV.Columns["FullName"].HeaderText = "Tên Giảng viên"; 
+            dgvGV.Columns["Gender"].HeaderText = "Giới tính"; 
+            dgvGV.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
+            dgvGV.Columns["FacultyName"].HeaderText = "Tên khoa";
             db.SaveChanges();
         }
         private void panel1_Paint(object sender, PaintEventArgs e)

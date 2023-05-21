@@ -29,11 +29,16 @@ namespace StudentManagement
                 {
                     if (query.isUser)
                     {
-                            textBox2.Text = "";
-                            this.Hide();
-                            FormStudentManagement st = new FormStudentManagement(query.Id);
-                            st.ShowDialog();
-                            this.Show();
+                        if(query.Role =="Nhân viên")
+                        {
+                            MessageBox.Show("Chức năng nhân viên sẽ được cập nhật trong thời gian tới!", "Thông báo");
+                            return;
+                        }
+                        textBox2.Text = "";
+                        this.Hide();
+                        FormStudentManagement st = new FormStudentManagement(query.Id);
+                        st.ShowDialog();
+                        this.Show();
                     }
                     else
                     {
