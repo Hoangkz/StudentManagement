@@ -137,16 +137,33 @@ namespace StudentManagement
                         i++;
                     }
                     var deleteAccount = db.Account.Where(u => arrId.Contains(u.Id));
-                    if (deleteAccount != null)
+                    if (deleteAccount.Any())
                     {
                         string message = "Bạn có chắc chắn muốn xóa danh sách tài khoản hay không?";
 
                         DialogResult result = MessageBox.Show(message, "Xóa Account", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
-                            string text = "Danh sách tài khoản trên đã xoá thành công!";
+                            foreach (var account in deleteAccount)
+                            {
+                                if (account.Role == "Giảng viên")
+                                {
+                                    var teacher = db.Teacher.FirstOrDefault(t => t.idUser == account.Id);
+                                    if (teacher != null)
+                                    {
+                                        var hasMark = db.Mark.Any(z => z.IdTeacher == teacher.IdTeacher);
+                                        if (hasMark)
+                                        {
+                                            string text2 = "Không thể xoá tài khoản: "+ account.FullName + " vì tồn tại bản ghi trong bảng Mark!";
+                                            MessageBox.Show(text2);
+                                            return; // Bỏ qua và dừng việc xoá tài khoản   
+                                        }
+                                    }
+                                }
+                            }
                             db.Account.RemoveRange(deleteAccount);
                             db.SaveChanges();
+                            string text = "Danh sách tài khoản trên đã xoá thành công!";
                             MessageBox.Show(text);
                             LoadDataAccount();
                         }

@@ -73,6 +73,7 @@
             this.dgvDSMH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSMH.Size = new System.Drawing.Size(799, 355);
             this.dgvDSMH.TabIndex = 10;
+            this.dgvDSMH.MultiSelectChanged += new System.EventHandler(this.dgvDSMH_MultiSelectChanged);
             this.dgvDSMH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSMH_CellContentClick);
             this.dgvDSMH.SelectionChanged += new System.EventHandler(this.dgvDSMH_SelectionChanged);
             // 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Linq;
+using System.Security.Principal;
 using System.Windows.Forms;
 
 namespace StudentManagement
@@ -36,7 +37,6 @@ namespace StudentManagement
             dgvGV.Columns["Gender"].HeaderText = "Giới tính"; 
             dgvGV.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
             dgvGV.Columns["FacultyName"].HeaderText = "Tên khoa";
-            db.SaveChanges();
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -98,18 +98,29 @@ namespace StudentManagement
                         i++;
                     }
                     var deleteTeacher = db.Teacher.Where(u => arrId.Contains(u.IdTeacher));
-                    Console.WriteLine("vào đây:");
-                    Console.WriteLine(deleteTeacher != null);
-                    if (deleteTeacher != null)
+                    Console.WriteLine(deleteTeacher.Count());
+                    var listAccount = db.Account.Where(a => deleteTeacher.Any(t => t.idUser == a.Id));
+                    Console.WriteLine(listAccount.Count());
+                    if (listAccount.Any())
                     {
                         string message = "Bạn có chắc chắn muốn xóa danh sách tài khoản hay không?";
-
                         DialogResult result = MessageBox.Show(message, "Xóa Account", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
-                            string text = "Danh sách tài khoản trên đã xoá thành công!";
-                            db.Teacher.RemoveRange(deleteTeacher);
+                            foreach (var teacher in deleteTeacher)
+                            {
+
+                                var hasMark = db.Mark.Any(z => z.IdTeacher == teacher.IdTeacher);
+                                if (hasMark)
+                                {
+                                    string text2 = "Không thể xoá tài khoản: " + teacher.Account.FullName + " vì tồn tại bản ghi trong bảng Mark!";
+                                    MessageBox.Show(text2);
+                                    return; // Bỏ qua và dừng việc xoá tài khoản   
+                                }
+                            }
+                            db.Account.RemoveRange(listAccount);
                             db.SaveChanges();
+                            string text = "Danh sách tài khoản trên đã xoá thành công!";
                             MessageBox.Show(text);
                             LoadDataTeacher();
                         }

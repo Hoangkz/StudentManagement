@@ -112,6 +112,7 @@ namespace StudentManagement
             try
             {
                 int indexGv = comboBox1.SelectedIndex - 1;
+
                 string className = txtClassname.Text;
                 if (className != "")
                 {
@@ -135,6 +136,11 @@ namespace StudentManagement
                         {
                             string text = "Thêm lớp: " + className + " thành công!";
                             db.ClassRoom.Add(classRoom);
+                            if (comboBox1.SelectedIndex > 0)
+                            {
+                                var teacher = db.Teacher.Find(ArrIdTeacher[indexGv]);
+                                teacher.IdClass = classRoom.IdClass;
+                            }
                             db.SaveChanges();
                             MessageBox.Show(text);
                             LoadListClass();

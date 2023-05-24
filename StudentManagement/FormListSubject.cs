@@ -303,14 +303,17 @@ namespace StudentManagement
 
         private void dgvDSMH_SelectionChanged(object sender, EventArgs e)
         {
-            if(dgvDSMH.SelectedRows.Count>1)
+            Console.WriteLine("vao day");
+            txtTimKiem.Text = "";
+            CbGV.Text = "";
+            btnSua.Text = "Cập nhật";
+            if (dgvDSMH.SelectedRows.Count>1)
             {
                 btnSua.Enabled = false;
             }
             else
             {
                 btnSua.Enabled = true;
-
             }
         }
 
@@ -320,6 +323,11 @@ namespace StudentManagement
             CbGV.Text = "";
             btnSua.Text = "Cập nhật";
             LoadDataSubject();
+        }
+
+        private void dgvDSMH_MultiSelectChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("vao day");
         }
     }
 }
