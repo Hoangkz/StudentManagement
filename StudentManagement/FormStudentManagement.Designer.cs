@@ -124,35 +124,35 @@ namespace StudentManagement
             // myClassToolStripMenuItem
             // 
             this.myClassToolStripMenuItem.Name = "myClassToolStripMenuItem";
-            this.myClassToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.myClassToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.myClassToolStripMenuItem.Text = "Lớp học của tôi";
             this.myClassToolStripMenuItem.Click += new System.EventHandler(this.lớpHọcCủaTôiToolStripMenuItem_Click);
             // 
             // sinhVienToolStripMenuItem
             // 
             this.sinhVienToolStripMenuItem.Name = "sinhVienToolStripMenuItem";
-            this.sinhVienToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sinhVienToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.sinhVienToolStripMenuItem.Text = "Sinh viên";
             this.sinhVienToolStripMenuItem.Click += new System.EventHandler(this.sinhVienToolStripMenuItem_Click);
             // 
             // monHocToolStripMenuItem
             // 
             this.monHocToolStripMenuItem.Name = "monHocToolStripMenuItem";
-            this.monHocToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.monHocToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.monHocToolStripMenuItem.Text = "Môn học";
             this.monHocToolStripMenuItem.Click += new System.EventHandler(this.monHocToolStripMenuItem_Click);
             // 
             // giaoVienToolStripMenuItem1
             // 
             this.giaoVienToolStripMenuItem1.Name = "giaoVienToolStripMenuItem1";
-            this.giaoVienToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.giaoVienToolStripMenuItem1.Size = new System.Drawing.Size(207, 26);
             this.giaoVienToolStripMenuItem1.Text = "Giáo viên";
             this.giaoVienToolStripMenuItem1.Click += new System.EventHandler(this.giaoVienToolStripMenuItem1_Click);
             // 
             // lopHocToolStripMenuItem
             // 
             this.lopHocToolStripMenuItem.Name = "lopHocToolStripMenuItem";
-            this.lopHocToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lopHocToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.lopHocToolStripMenuItem.Text = "Lớp học";
             this.lopHocToolStripMenuItem.Click += new System.EventHandler(this.lopHocToolStripMenuItem_Click);
             // 

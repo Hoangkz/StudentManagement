@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentManagement
@@ -145,13 +140,13 @@ namespace StudentManagement
                 textBox1.Text = UpdateAccount.UserName;
                 textBox3.Text = UpdateAccount.FullName;
                 textBox4.Text = UpdateAccount.Phone;
-                DateTime dateTime = DateTime.ParseExact(UpdateAccount.DateOfBirth, "dd/MM/yyyy", null);
-
-                dateTimePicker1.Value = dateTime;
                 string Role = UpdateAccount.Role;
                 textBox5.Text = UpdateAccount.Email;
                 comboBox1.SelectedItem = Role;
                 comboBox2.SelectedItem = UpdateAccount.Gender;
+                DateTime dateTime = DateTime.ParseExact(UpdateAccount.DateOfBirth, "dd/MM/yyyy", null);
+
+                dateTimePicker1.Value = dateTime;
                 var query = from c in db.Faculty
                             select new { id = c.IdFaculty, Khoa = c.FacultyName };
                 for (int i = 0; i < query.Count(); i++)

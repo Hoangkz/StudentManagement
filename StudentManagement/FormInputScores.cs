@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentManagement
@@ -50,6 +43,8 @@ namespace StudentManagement
             }
             else
             {
+                this.Text = "Cập nhật";
+                label7.Text = "Cập nhật";
                 textBox1.Text = dataColumn.Cells[5].Value.ToString();
                 textBox2.Text = dataColumn.Cells[6].Value.ToString();
             }
@@ -74,7 +69,7 @@ namespace StudentManagement
             }
 
             var mark = db.Mark.Find(dataColumn.Cells["Id"].Value);
-            if(mark != null)
+            if (mark != null)
             {
                 if (point1 >= 0)
                 {
@@ -84,7 +79,14 @@ namespace StudentManagement
                 {
                     mark.Scores2 = point2;
                 }
-
+                if (point1 > 10|| point2 < 0)
+                {
+                    return;
+                }
+                if (point2> 10 || point2 < 0)
+                {
+                    return;
+                }
                 string message = "Xác nhận điểm đã nhập?";
                 string text = "Nhập điểm cho sinh viên thành công!";
 

@@ -187,4 +187,5 @@ namespace StudentManagement
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
+
 }

@@ -98,9 +98,9 @@ namespace StudentManagement
                         i++;
                     }
                     var deleteTeacher = db.Teacher.Where(u => arrId.Contains(u.IdTeacher));
-                    Console.WriteLine(deleteTeacher.Count());
+                    //Console.WriteLine(deleteTeacher.Count());
                     var listAccount = db.Account.Where(a => deleteTeacher.Any(t => t.idUser == a.Id));
-                    Console.WriteLine(listAccount.Count());
+                    //Console.WriteLine(listAccount.Count());
                     if (listAccount.Any())
                     {
                         string message = "Bạn có chắc chắn muốn xóa danh sách tài khoản hay không?";
